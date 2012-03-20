@@ -1,6 +1,7 @@
 ﻿Public Class Rpersonal
 
     Public Shared Function SeleccionarTodo(ByVal descEmpresa As String, ByVal DisplaySelect As Boolean) As List(Of Epersonal)
+
         Dim personals As List(Of Epersonal) = Nothing
 
         Dim options As New TransactionOptions
@@ -21,6 +22,7 @@
         Return personals
     End Function
     'Public Shared Function SeleccionarXEstado(ByVal DisplaySelect As Boolean) As List(Of Epersonal)
+
     '    Dim personals As List(Of Epersonal) = Nothing
 
     '    Dim options As New TransactionOptions
