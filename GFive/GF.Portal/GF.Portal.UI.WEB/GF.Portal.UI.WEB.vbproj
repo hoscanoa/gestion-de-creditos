@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EEB07DBD-B4F5-4DED-BCE8-96BB5FA17313}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>GF.Portal.UI.WEB</RootNamespace>
+    <AssemblyName>GF.Portal.UI.WEB</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>GF.Portal.UI.WEB.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>GF.Portal.UI.WEB.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.5.40412.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Ajax3.5\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="imagenes\diseño\1287766624_control_left.png" />
+    <Content Include="imagenes\diseño\1287766630_control_left.ico" />
+    <Content Include="imagenes\diseño\1287766758_control_right.png" />
+    <Content Include="imagenes\diseño\1287766762_control_right.ico" />
+    <Content Include="imagenes\diseño\add.png" />
+    <Content Include="imagenes\diseño\delete.png" />
+    <Content Include="imagenes\diseño\Edit.png" />
+    <Content Include="imagenes\diseño\excel.gif" />
+    <Content Include="imagenes\diseño\find.png" />
+    <Content Include="imagenes\diseño\px_td.jpg" />
+    <Content Include="imagenes\diseño\search.png" />
+    <Content Include="imagenes\diseño\showMnu.png" />
+    <Content Include="imagenes\diseño\submenu2.PNG" />
+    <Content Include="imagenes\procesos\gif_loading.gif" />
+    <Content Include="imagenes\procesos\loading.gif" />
+    <Content Include="javascript\FG.js" />
+    <Content Include="javascript\ieupdate.js" />
+    <Content Include="scripts\jquery-1.3.2-vsdoc.js" />
+    <Content Include="scripts\jquery-1.3.2.js" />
+    <Content Include="scripts\jquery-1.3.2.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Code\clsFecha.vb" />
+    <Content Include="App_Code\Saludame.vb" />
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="masters\fgPortal.Master.designer.vb">
+      <DependentUpon>fgPortal.Master</DependentUpon>
+    </Compile>
+    <Compile Include="masters\fgPortal.Master.vb">
+      <DependentUpon>fgPortal.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="seguridad\bienvenida.aspx.designer.vb">
+      <DependentUpon>bienvenida.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="seguridad\bienvenida.aspx.vb">
+      <DependentUpon>bienvenida.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="seguridad\login.aspx.designer.vb">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="seguridad\login.aspx.vb">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="tablas\cliente.aspx.designer.vb">
+      <DependentUpon>cliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tablas\cliente.aspx.vb">
+      <DependentUpon>cliente.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="tablas\producto.aspx.designer.vb">
+      <DependentUpon>producto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tablas\producto.aspx.vb">
+      <DependentUpon>producto.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\PrincipalTheme\Boton.skin" />
+    <Content Include="App_Themes\PrincipalTheme\ComboBox.skin" />
+    <Content Include="App_Themes\PrincipalTheme\FileUpload.skin" />
+    <Content Include="App_Themes\PrincipalTheme\Grilla.skin" />
+    <Content Include="App_Themes\PrincipalTheme\Label.skin" />
+    <Content Include="App_Themes\PrincipalTheme\LinkButton.skin" />
+    <Content Include="App_Themes\PrincipalTheme\Opcion.skin" />
+    <Content Include="App_Themes\PrincipalTheme\TextBox.skin" />
+    <None Include="imagenes\diseño\Thumbs.db" />
+    <None Include="imagenes\procesos\Thumbs.db" />
+    <Content Include="App_Themes\PrincipalTheme\Boton.css" />
+    <Content Include="App_Themes\PrincipalTheme\ComboBox.css" />
+    <Content Include="App_Themes\PrincipalTheme\cssControles.css" />
+    <Content Include="App_Themes\PrincipalTheme\FileUpload.css" />
+    <Content Include="App_Themes\PrincipalTheme\FullGanador.css" />
+    <Content Include="App_Themes\PrincipalTheme\Grilla.css" />
+    <Content Include="App_Themes\PrincipalTheme\Label.css" />
+    <Content Include="App_Themes\PrincipalTheme\LinkButton.css" />
+    <Content Include="App_Themes\PrincipalTheme\Opcion.css" />
+    <Content Include="App_Themes\PrincipalTheme\TextBox.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="imagenes\presentacion\gf.jpg" />
+    <Content Include="masters\fgPortal.Master" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="seguridad\bienvenida.aspx" />
+    <Content Include="seguridad\login.aspx" />
+    <Content Include="tablas\cliente.aspx" />
+    <Content Include="tablas\producto.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GF.Layer.BL.BC\GF.Layer.BL.BC.vbproj">
+      <Project>{D66AFA1F-25E6-4EAF-8622-86D6B7313D64}</Project>
+      <Name>GF.Layer.BL.BC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GF.Layer.BL.BE\GF.Layer.BL.BE.vbproj">
+      <Project>{76FF9B6C-A970-4B36-B46C-B4B77B9D0364}</Project>
+      <Name>GF.Layer.BL.BE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GF.Layer.DL.DAL\GF.Layer.DL.DAL.vbproj">
+      <Project>{42460BD1-69BF-46DE-A21B-470135493FC4}</Project>
+      <Name>GF.Layer.DL.DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1046</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
