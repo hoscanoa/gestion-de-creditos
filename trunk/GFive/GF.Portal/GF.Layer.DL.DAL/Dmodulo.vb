@@ -1,4 +1,7 @@
-﻿Public Class Dmodulo
+﻿
+'El menú de opciones es formado dinamicamente desde la base de datos
+
+Public Class Dmodulo
     Private Shared cadena As String = DconnectionManager.GetCadena()
 
     Public Shared Function SeleccionarTodo(ByVal idModulo As Int32) As List(Of Emodulos)

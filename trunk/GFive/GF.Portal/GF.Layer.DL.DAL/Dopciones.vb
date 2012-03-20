@@ -34,6 +34,8 @@
 
         Return opciones
     End Function
+
+    'Recuperamos las opciones por modulo y submodulos para cada usuario segun perfil
     Public Shared Function SeleccionarTodoXModuloSubModulo(ByVal idModulo As Int32, ByVal idPerfil As Int32) As List(Of Eopciones)
         Dim opciones As List(Of Eopciones) = Nothing
 
