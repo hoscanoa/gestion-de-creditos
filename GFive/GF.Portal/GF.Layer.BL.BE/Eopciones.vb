@@ -8,6 +8,7 @@ Public Class Eopciones
     Private _descOpcion As String
     Private _direccionUrl As String
     Private _estado As String
+   'Private _estado As String
     Private _descEstado As String
 
     '------- Seguridad -------'
