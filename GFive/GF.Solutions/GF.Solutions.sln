@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "GF.Layer.BL.BC", "..\GF.Portal\GF.Layer.BL.BC\GF.Layer.BL.BC.vbproj", "{D66AFA1F-25E6-4EAF-8622-86D6B7313D64}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "GF.Portal.UI.WEB", "..\GF.Portal\GF.Portal.UI.WEB\GF.Portal.UI.WEB.vbproj", "{EEB07DBD-B4F5-4DED-BCE8-96BB5FA17313}"
@@ -10,10 +10,6 @@ EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "GF.Layer.DL.DAL", "..\GF.Portal\GF.Layer.DL.DAL\GF.Layer.DL.DAL.vbproj", "{42460BD1-69BF-46DE-A21B-470135493FC4}"
 EndProject
 Global
-	GlobalSection(SubversionScc) = preSolution
-		Svn-Managed = True
-		Manager = AnkhSVN - Subversion Support for Visual Studio
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -38,5 +34,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
 	EndGlobalSection
 EndGlobal

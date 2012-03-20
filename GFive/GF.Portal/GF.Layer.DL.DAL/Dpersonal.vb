@@ -47,6 +47,40 @@
 
         Return personals
     End Function
+
+    'Public Shared Function actualizar(ByVal descEmpresa As String, ByVal pPersonal As Epersonal) As Boolean
+    'Dim resultado As Boolean = False
+    ' Using cn As New SqlConnection(ConfigurationManager.ConnectionStrings(descEmpresa).ConnectionString)
+    'Using cmd As New SqlCommand("usp_personal_update", cn)
+    ' cmd.CommandType = CommandType.StoredProcedure
+    ' cmd.Parameters.Add("@idPersonal", SqlDbType.Int).Value = pPersonal.idPersonal
+    ' cmd.Parameters.Add("@idTpoDcmto", SqlDbType.Int).Value = pPersonal.EtpoDocmto.idTpoDcmto
+    ' cmd.Parameters.Add("@nroDcmto", SqlDbType.VarChar, 55).Value = pPersonal.nroDcmto
+    ' cmd.Parameters.Add("@nombre", SqlDbType.VarChar, 55).Value = pPersonal.nombre
+    ' cmd.Parameters.Add("@apePaterno", SqlDbType.VarChar, 55).Value = pPersonal.apePaterno
+    ' cmd.Parameters.Add("@apeMaterno", SqlDbType.VarChar, 55).Value = pPersonal.apeMaterno
+    ' cmd.Parameters.Add("@descripcion", SqlDbType.VarChar, 55).Value = pPersonal.descripcion
+    ' cmd.Parameters.Add("@areaTrabajo", SqlDbType.VarChar, 55).Value = pPersonal.areaTrabajo
+    ' cmd.Parameters.Add("@telefonoFijo", SqlDbType.VarChar, 11).Value = pPersonal.telefonoFijo
+    ' cmd.Parameters.Add("@telefonoCelular", SqlDbType.VarChar, 11).Value = pPersonal.telefonoCelular
+    ' cmd.Parameters.Add("@email", SqlDbType.VarChar, 55).Value = pPersonal.email
+    ' cmd.Parameters.Add("@fchRegistro", SqlDbType.VarChar, 10).Value = pPersonal.fchRegistro
+    ' cmd.Parameters.Add("@fchCaducacion", SqlDbType.VarChar, 10).Value = pPersonal.fchCaducacion
+    ' cmd.Parameters.Add("@estado", SqlDbType.Char, 1).Value = pPersonal.estado
+    ' cmd.Parameters.Add("@idUsuario", SqlDbType.Int).Value = pPersonal.idUsuario
+    '  Try
+    '     cn.Open()
+    '  cmd.ExecuteNonQuery()
+    '  resultado = True
+    ' Catch ex As Exception
+    '     Throw
+    ' End Try
+    ' End Using
+    ' End Using
+
+    ' Return resultado
+    'End Function
+
     Public Shared Function Añadir(ByVal descEmpresa As String, ByVal pPersonal As Epersonal, ByRef idPersonal As Int32) As Boolean
         Dim resultado As Boolean = False
 
