@@ -97,4 +97,25 @@
 
         Return productos
     End Function
+
+    Public Function Stock(ByVal idproducto As String) As String
+        Dim Dproducto As New Dproducto
+        Dim producto As String = String.Empty
+
+        Dim options As New TransactionOptions
+        options.IsolationLevel = Transactions.IsolationLevel.ReadCommitted
+        options.Timeout = New TimeSpan(0, 2, 0)
+
+        Using scope As New TransactionScope(TransactionScopeOption.Required, options)
+            Try
+                producto = Dproducto.Stock(idproducto)
+                If producto Is String.Empty Then producto = String.Empty
+                scope.Complete()
+            Catch ex As Exception
+                Throw
+            End Try
+        End Using
+
+        Return producto
+    End Function
 End Class

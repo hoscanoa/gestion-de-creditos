@@ -98,4 +98,25 @@
         Return clientes
     End Function
 
+    Public Function Obtener(ByVal idCliente As String) As String
+        Dim Dcliente As New Dcliente
+        Dim cliente As String = String.Empty
+
+        Dim options As New TransactionOptions
+        options.IsolationLevel = Transactions.IsolationLevel.ReadCommitted
+        options.Timeout = New TimeSpan(0, 2, 0)
+
+        Using scope As New TransactionScope(TransactionScopeOption.Required, options)
+            Try
+                cliente = Dcliente.Obtener(idCliente)
+                If cliente Is Nothing Then cliente = String.Empty
+                scope.Complete()
+            Catch ex As Exception
+                Throw
+            End Try
+        End Using
+
+        Return cliente
+    End Function
+
 End Class
