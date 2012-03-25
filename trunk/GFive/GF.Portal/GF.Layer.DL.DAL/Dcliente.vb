@@ -149,4 +149,30 @@
 
         Return clientes
     End Function
+
+    Public Function Obtener(ByVal idCliente As String) As String
+        Dim cliente As String = String.Empty
+
+        Using cn As New SqlConnection(cadena)
+            Using cmd As New SqlCommand("usp_cliente_obtener", cn)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.Add("@cli_ruc", SqlDbType.VarChar, 55).Value = idCliente
+                Try
+                    cn.Open()
+                    Using dr As SqlDataReader = cmd.ExecuteReader(CommandBehavior.SingleResult Or CommandBehavior.CloseConnection)
+                        If dr.HasRows Then
+                            Do While dr.Read
+                                cliente = dr.GetValue(dr.GetOrdinal("cli_RazonSocial"))
+                            Loop
+                            dr.Close()
+                        End If
+                    End Using
+                Catch ex As Exception
+                    Throw
+                End Try
+            End Using
+        End Using
+
+        Return cliente
+    End Function
 End Class
