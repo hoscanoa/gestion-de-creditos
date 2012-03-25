@@ -7,6 +7,7 @@ import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -44,13 +45,14 @@ public class LoginController {
 	}
 
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public String loggearUsuario(@ModelAttribute("login") Usuario usuario,
-			Model model) {
+	public String doPost(HttpServletRequest request,
+			HttpServletResponse response) {
 		logger.debug("Login usuario");
-
-		String nombreUsuario = usuario.getUsuario();
-		String password = usuario.getContraseña();
-		usuarioManager.login(nombreUsuario, password);
+		String nombreUsuario = request.getParameter("user");
+		String password = request.getParameter("pass");
+		Usuario usuario = usuarioManager.login(nombreUsuario, password);
+		HttpSession session = request.getSession();
+		session.setAttribute("USUARIO_ACTUAL", usuario);
 		return "pedidos";
 	}
 

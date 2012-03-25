@@ -18,12 +18,12 @@
 		<table>
 			<tr>
 				<td><label>Nombre de Usuario:</label></td>
-				<td><input/></td>
+				<td><input type="text" name="user"/></td>
 			</tr>
 
 			<tr>
 				<td><label>Contraseña:</label></td>
-				<td><input/></td>
+				<td><input type = "password" name="pass"/></td>
 			</tr>
 		</table>
 

@@ -20,18 +20,12 @@ public class JPAUsuarioDaoTests {
         usuarioDao = (UsuarioDao) context.getBean("usuarioDao");
         nombre = "CESAR";
         password = "CESAR";
-        
     }
 
     @Test
-    public void testConfirmarUsuario() {        
-		try {
+    public void testConfirmarUsuario() throws Exception {
 			Usuario resultado;
 			resultado = usuarioDao.getUsuario(nombre, password);
-			Assert.assertEquals(resultado.getUsuario() , "CESAR");	
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-           
+			Assert.assertEquals(resultado.getUsuario() , "CESAR");
     }
 }
