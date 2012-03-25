@@ -7,11 +7,11 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-
-//TODO 1: modificar y adaptar a BD (en especial por atributo "usuario")
-
 @Table(name="Tusuario")
 public class Usuario implements Serializable{
+
+	//TODO 1: modificar y adaptar a BD (en especial por atributo "usuario")
+
 	
 	private static final long serialVersionUID = 1L;
 	
