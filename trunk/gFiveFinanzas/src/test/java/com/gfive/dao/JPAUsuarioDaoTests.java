@@ -11,17 +11,15 @@ import com.gfive.domain.Usuario;
 public class JPAUsuarioDaoTests {
 
     private UsuarioDao usuarioDao;
-    private Usuario usuario;
+    private String nombre;
+    private String password;
 
     @Before
     public void setUp() throws Exception {
         ApplicationContext context = new ClassPathXmlApplicationContext("classpath:test-context.xml");
         usuarioDao = (UsuarioDao) context.getBean("usuarioDao");
-        usuario = new Usuario();
-        usuario.setUsuario("CESAR");
-        usuario.setContraseña("CESAR");
-        usuario.setIdUsuario(0);
-        usuario.setIdPerfilUsuario(0);
+        nombre = "CESAR";
+        password = "CESAR";
         
     }
 
@@ -29,7 +27,7 @@ public class JPAUsuarioDaoTests {
     public void testConfirmarUsuario() {        
 		try {
 			Usuario resultado;
-			resultado = usuarioDao.confirmarUsuario(usuario);
+			resultado = usuarioDao.getUsuario(nombre, password);
 			Assert.assertEquals(resultado.getUsuario() , "CESAR");	
 		} catch (Exception e) {
 			e.printStackTrace();
