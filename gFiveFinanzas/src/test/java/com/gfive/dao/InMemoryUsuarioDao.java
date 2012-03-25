@@ -5,8 +5,7 @@ import com.gfive.domain.Usuario;
 public class InMemoryUsuarioDao implements UsuarioDao{
 	
 
-	@Override
-	public Usuario confirmarUsuario(Usuario usuario) {		
+	public Usuario getUsuario(String nombre, String password) {		
 		return null;
 	}
 }
