@@ -4,6 +4,6 @@ import com.gfive.domain.Usuario;
 
 public interface UsuarioDao {
 	
-	public Usuario confirmarUsuario(Usuario usuario) throws Exception;
+	public Usuario getUsuario(String nombre, String password) throws Exception;
 
 }
