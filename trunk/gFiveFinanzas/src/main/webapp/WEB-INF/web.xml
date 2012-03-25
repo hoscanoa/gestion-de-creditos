@@ -23,7 +23,7 @@
 	
 	<servlet-mapping>
 		<servlet-name>gFive</servlet-name>
-		<url-pattern>*.htm</url-pattern>
+		<url-pattern>/gfive/*</url-pattern>
 	</servlet-mapping>
 
 	<listener>
