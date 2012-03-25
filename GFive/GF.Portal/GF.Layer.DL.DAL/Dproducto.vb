@@ -150,4 +150,32 @@
         Return productos
     End Function
 
+    Public Function Stock(ByVal idProducto As String) As String
+
+        Dim producto As String = String.Empty
+
+        Using cn As New SqlConnection(cadena)
+            Using cmd As New SqlCommand("usp_producto_stock", cn)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.Add("@pro_id", SqlDbType.VarChar, 55).Value = idProducto
+                Try
+                    cn.Open()
+                    Using dr As SqlDataReader = cmd.ExecuteReader(CommandBehavior.SingleResult Or CommandBehavior.CloseConnection)
+                        If dr.HasRows Then
+                            Do While dr.Read
+                                producto = CType(dr.GetValue(dr.GetOrdinal("pro_stock")), String)
+                            Loop
+                            dr.Close()
+                        End If
+                    End Using
+                Catch ex As Exception
+                    Throw
+                End Try
+            End Using
+        End Using
+
+        Return producto
+    End Function
+
+
 End Class
