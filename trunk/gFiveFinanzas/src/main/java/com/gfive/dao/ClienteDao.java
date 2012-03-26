@@ -9,5 +9,7 @@ public interface ClienteDao {
 	public void grabarCliente(Cliente cliente);
 	
 	public void actualizarCliente(Cliente cliente);
+	
+	public void eliminarCliente(Cliente cliente);
 
 }
