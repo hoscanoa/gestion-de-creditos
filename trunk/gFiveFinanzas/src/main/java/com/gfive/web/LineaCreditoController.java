@@ -30,21 +30,19 @@ import com.gfive.domain.Usuario;
 import com.gfive.service.aplicacion.UsuarioManager;
 
 @Controller
-public class LoginController {
+public class LineaCreditoController {
 
 	protected final Log logger = LogFactory.getLog(getClass());
 
-	@Autowired
+	/*@Autowired
 	private UsuarioManager usuarioManager;
+*/
+	@RequestMapping(value = "lineacredito", method = RequestMethod.GET)
+    protected String formBackingObject(HttpServletRequest request) throws ServletException {
+        return "lineacredito";
+    }
 
-	@RequestMapping(value = "portada")
-	public ModelAndView handleRequest(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
-
-		return new ModelAndView();
-	}
-
-	@RequestMapping(value = "/login", method = RequestMethod.POST)
+/*	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public String doPost(HttpServletRequest request,
 			HttpServletResponse response) {
 		logger.debug("Login usuario");
@@ -62,5 +60,5 @@ public class LoginController {
 
 	public UsuarioManager getUsuarioManager() {
 		return usuarioManager;
-	}
+	}*/
 }
