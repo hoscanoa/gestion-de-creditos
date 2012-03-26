@@ -18,7 +18,14 @@ public class Cliente implements Serializable{
 	private String cli_razonSocial;
 	private float cli_lineaCreditoTotal;
 	private float cli_lineaCreditoSaldo;
+	private String estado;
 	
+	public String getEstado() {
+		return estado;
+	}
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
 	public String getCli_ruc() {
 		return cli_ruc;
 	}

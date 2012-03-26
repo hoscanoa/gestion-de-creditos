@@ -18,7 +18,14 @@ public class Pedido implements Serializable{
 	private String situacion;
 	private float montoTotal;
 	private String cli_ruc;
+	private String estado;
 	
+	public String getEstado() {
+		return estado;
+	}
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
 	public int getIdPedido() {
 		return idPedido;
 	}
