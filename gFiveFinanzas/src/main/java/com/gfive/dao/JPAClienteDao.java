@@ -10,7 +10,6 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.gfive.domain.Cliente;
-import com.gfive.domain.Usuario;
 
 @Repository(value = "clienteDao")
 public class JPAClienteDao implements ClienteDao {
