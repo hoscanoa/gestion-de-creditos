@@ -7,7 +7,7 @@
 </head>
 <body>
 	Bienvenido
-	<c:out value="${sessionScope.USUARIO_ACTUAL.usuario}"></c:out>
+	<c:out value="${sessionScope.USUARIO_ACTUAL.nombreUsuario}"></c:out>
 	<ul>
 		<li>Pedidos
 			<ul>

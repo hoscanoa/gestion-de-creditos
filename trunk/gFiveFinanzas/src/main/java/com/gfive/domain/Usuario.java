@@ -7,31 +7,18 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Tusuario")
+@Table(name="Usuario")
 public class Usuario implements Serializable{
-
-	//TODO 1: modificar y adaptar a BD (en especial por atributo "usuario")
-
 	
 	private static final long serialVersionUID = 1L;
 	
 	@Id
 	private int idUsuario;
-	
-	private int idPersonal;
-	private int idPerfilUsuario;
-	private String usuario;
+
+	private String nombreUsuario;
 	private String contraseña;
 	private int intentos;
 	private String estado;
-	
-	
-	public int getIdPersonal() {
-		return idPersonal;
-	}
-	public void setIdPersonal(int idPersonal) {
-		this.idPersonal = idPersonal;
-	}
 	
 	public int getIntentos() {
 		return intentos;
@@ -39,18 +26,11 @@ public class Usuario implements Serializable{
 	public void setIntentos(int intentos) {
 		this.intentos = intentos;
 	}
-	
-	public int getIdPerfilUsuario() {
-		return idPerfilUsuario;
+	public String getNombreUsuario() {
+		return nombreUsuario;
 	}
-	public void setIdPerfilUsuario(int idPerfilUsuario) {
-		this.idPerfilUsuario = idPerfilUsuario;
-	}
-	public String getUsuario() {
-		return usuario;
-	}
-	public void setUsuario(String usuario) {
-		this.usuario = usuario;
+	public void setNombreUsuario(String usuario) {
+		this.nombreUsuario = usuario;
 	}
 	public String getContraseña() {
 		return contraseña;

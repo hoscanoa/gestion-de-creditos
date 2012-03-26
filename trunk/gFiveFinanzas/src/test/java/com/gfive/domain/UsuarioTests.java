@@ -16,9 +16,9 @@ public class UsuarioTests {
 	@Test
 	public void testSetAndGetNombre() {
 		String testNombre = "aNombre";
-		Assert.assertNull(usuario.getUsuario());
-		usuario.setUsuario(testNombre);
-		Assert.assertEquals(testNombre, usuario.getUsuario());		
+		Assert.assertNull(usuario.getNombreUsuario());
+		usuario.setNombreUsuario(testNombre);
+		Assert.assertEquals(testNombre, usuario.getNombreUsuario());		
 	}
 	
 	@Test

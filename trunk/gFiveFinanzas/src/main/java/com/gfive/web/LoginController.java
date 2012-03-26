@@ -39,9 +39,9 @@ public class LoginController {
 
 	@RequestMapping(value = "portada")
 	public ModelAndView handleRequest(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
+			HttpServletResponse response) throws ServletException, IOException {		
 
-		return new ModelAndView();
+		return new ModelAndView("portada");
 	}
 
 	@RequestMapping(value = "/login", method = RequestMethod.POST)

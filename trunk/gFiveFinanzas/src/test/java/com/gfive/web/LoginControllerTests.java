@@ -21,9 +21,6 @@ public class LoginControllerTests {
 		ModelAndView modelAndView = controller.handleRequest(null, null);
 		Assert.assertEquals("portada", modelAndView.getViewName());
 		Assert.assertNotNull(modelAndView.getModel());
-		Map modelMap = (Map) modelAndView.getModel().get("model");
-		String nowValue = (String) modelMap.get("now");
-		Assert.assertNotNull(nowValue);
 	}
 
 }

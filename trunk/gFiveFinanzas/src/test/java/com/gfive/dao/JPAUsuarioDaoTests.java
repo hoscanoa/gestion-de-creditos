@@ -18,14 +18,14 @@ public class JPAUsuarioDaoTests {
     public void setUp() throws Exception {
         ApplicationContext context = new ClassPathXmlApplicationContext("classpath:test-context.xml");
         usuarioDao = (UsuarioDao) context.getBean("usuarioDao");
-        nombre = "CESAR";
-        password = "CESAR";
+        nombre = "MIGUEL";
+        password = "MIGUEL";
     }
 
     @Test
     public void testConfirmarUsuario() throws Exception {
 			Usuario resultado;
 			resultado = usuarioDao.getUsuario(nombre, password);
-			Assert.assertEquals(resultado.getUsuario() , "CESAR");
+			Assert.assertEquals(resultado.getNombreUsuario() , "MIGUEL");
     }
 }
