@@ -32,7 +32,7 @@ public class JPAUsuarioDao implements UsuarioDao {
 		// query.setParameter(1, usuario.getUsuario());
 		// query.setParameter(2, usuario.getContraseña());
 		Query query = em
-				.createQuery("select p from Usuario p where p.usuario = ? AND p.contraseña = ?");
+				.createQuery("select p from Usuario p where p.nombreUsuario = ? AND p.contraseña = ?");
 		query.setParameter(1, nombre);
 		query.setParameter(2, password);
 		List<Usuario> usuarios = query.getResultList();
