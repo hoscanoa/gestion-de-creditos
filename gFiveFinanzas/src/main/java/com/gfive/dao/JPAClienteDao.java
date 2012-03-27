@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.gfive.domain.Cliente;
+import com.gfive.domain.Pedido;
 
 @Repository(value = "clienteDao")
 public class JPAClienteDao implements ClienteDao {
@@ -28,18 +29,10 @@ public class JPAClienteDao implements ClienteDao {
 	@SuppressWarnings("unchecked")
 	public Cliente getCliente(String ruc) throws Exception {
 		Query query = em
-				.createQuery("select c from Cliente c where c.cli_ruc = ?");
+				.createQuery("select c from Cliente c where c.cli_ruc = ? order by c.cli_ruc");
 		query.setParameter(1, ruc);
-		List<Cliente> clientes = query.getResultList();
-		if (clientes.size() < 1) {
-			return null;
-		} else {
-			if (clientes.size() > 1){
-				throw new Exception("cliente duplicado en BD");
-			} else {
-				return clientes.get(0);
-			}
-		}
+		Cliente cliente = (Cliente) query.getSingleResult();
+		return cliente;
 	}
 
 	@Transactional(readOnly = false)
@@ -54,8 +47,8 @@ public class JPAClienteDao implements ClienteDao {
 		query.setParameter(1, cliente.getCli_lineaCreditoTotal());
 		query.setParameter(2, cliente.getCli_lineaCreditoSaldo());
 		query.setParameter(3, cliente.getCli_ruc());
+		System.out.println(cliente.getCli_ruc());
 		query.executeUpdate();
-
 	}
 
 	@Transactional(readOnly = false)
@@ -63,5 +56,12 @@ public class JPAClienteDao implements ClienteDao {
 		Query query = em
 				.createQuery("DELETE FROM Cliente c WHERE c.cli_ruc = ?");
 		query.setParameter(1, cliente.getCli_ruc()).executeUpdate();
+	}
+
+	@SuppressWarnings("unchecked")
+	@Transactional(readOnly = true)
+	public List<Cliente> getClientes() {
+		return em.createQuery("select c from Cliente c order by c.cli_ruc")
+				.getResultList();
 	}
 }

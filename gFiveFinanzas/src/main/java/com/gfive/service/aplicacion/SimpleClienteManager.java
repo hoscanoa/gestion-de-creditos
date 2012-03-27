@@ -1,5 +1,7 @@
 package com.gfive.service.aplicacion;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -78,7 +80,6 @@ public class SimpleClienteManager implements ClienteManager {
 		}return false;		
 	}
 
-	@Override
 	public Cliente getCliente(Pedido pedido) {
 		try {
 			return clienteDao.getCliente(pedido.getCli_ruc());
@@ -87,7 +88,6 @@ public class SimpleClienteManager implements ClienteManager {
 		} return null;
 	}
 
-	@Override
 	public Cliente getCliente(String ruc) {
 		try {
 			return clienteDao.getCliente(ruc);
@@ -100,5 +100,10 @@ public class SimpleClienteManager implements ClienteManager {
 		cliente.setCli_lineaCreditoSaldo(cliente.getCli_lineaCreditoSaldo() - (float)reduccion);
 		clienteDao.actualizarCliente(cliente);
 	}
+	
+	public List<Cliente> getClientes() {
+		return clienteDao.getClientes();
+	}
+
 
 }

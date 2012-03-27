@@ -27,6 +27,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.gfive.domain.Usuario;
+import com.gfive.service.aplicacion.ClienteManager;
+import com.gfive.service.aplicacion.PedidoManager;
 import com.gfive.service.aplicacion.UsuarioManager;
 
 @Controller
@@ -34,31 +36,21 @@ public class VistaClientesController {
 
 	protected final Log logger = LogFactory.getLog(getClass());
 
-	/*@Autowired
-	private UsuarioManager usuarioManager;
-*/
-	@RequestMapping(value = "vistaclientes", method = RequestMethod.GET)
-    protected String formBackingObject(HttpServletRequest request) throws ServletException {
-        return "vistaclientes";
-    }
+	@Autowired
+	private ClienteManager clienteManager;
 
-/*	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public String doPost(HttpServletRequest request,
-			HttpServletResponse response) {
-		logger.debug("Login usuario");
-		String nombreUsuario = request.getParameter("user");
-		String password = request.getParameter("pass");
-		Usuario usuario = usuarioManager.login(nombreUsuario, password);
-		HttpSession session = request.getSession();
-		session.setAttribute("USUARIO_ACTUAL", usuario);
-		return "home";
+	@RequestMapping(value = "vistaclientes", method = RequestMethod.GET)	
+	public String getAll(Model model) {
+		logger.debug("Lee todos los clientes de la BD");
+		model.addAttribute("clientes", clienteManager.getClientes());
+		return "vistaclientes";
+	}
+	
+	public void setClienteManager(ClienteManager clienteManager) {
+		this.clienteManager = clienteManager;
 	}
 
-	public void setUsuarioManager(UsuarioManager usuarioManager) {
-		this.usuarioManager = usuarioManager;
+	public ClienteManager getClienteManager() {
+		return clienteManager;
 	}
-
-	public UsuarioManager getUsuarioManager() {
-		return usuarioManager;
-	}*/
 }
