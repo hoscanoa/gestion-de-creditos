@@ -9,9 +9,7 @@ import javax.persistence.Query;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.gfive.domain.Cliente;
 import com.gfive.domain.Pedido;
-import com.gfive.domain.Usuario;
 
 @Repository(value = "pedidoDao")
 public class JPAPedidoDao implements PedidoDao {
