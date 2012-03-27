@@ -1,5 +1,7 @@
 package com.gfive.dao;
 
+import java.util.List;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -7,6 +9,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.gfive.domain.Cliente;
+import com.gfive.domain.Pedido;
 
 public class JPAClienteDaoTests {
 
@@ -57,5 +60,12 @@ public class JPAClienteDaoTests {
         testCliente.setCli_lineaCreditoTotal(50000.00f);
         clienteDao.actualizarCliente(testCliente);
     }
+	
+	@Test
+	public void getClientes(){
+
+		List<Cliente> listaTodos = clienteDao.getClientes();
+		Assert.assertNotNull(listaTodos);
+	}
     
 }

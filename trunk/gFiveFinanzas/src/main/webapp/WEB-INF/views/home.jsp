@@ -18,7 +18,7 @@
 		</li>
 		<li>Clientes
 			<ul>
-				<li><a href="vistaclientes">Buscar cliente</a></li>
+				<li><a href="vistaclientes">Administrar clientes</a></li>
 			</ul>
 		</li>
 	</ul>
