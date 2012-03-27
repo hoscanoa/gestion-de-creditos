@@ -23,5 +23,7 @@ public interface PedidoManager extends Serializable{
 	public List<Pedido> getPedidosObservados();
 	
 	public List<Pedido> getPedidosAprobados();
+	
+	
 
 }
