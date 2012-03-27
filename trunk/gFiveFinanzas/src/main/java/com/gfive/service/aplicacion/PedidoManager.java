@@ -8,13 +8,20 @@ import com.gfive.domain.Pedido;
 
 public interface PedidoManager extends Serializable{
 	
-	public void agregarPedido(int idPedido, String situacion, double montoTotal, String cli_ruc);
-	
-	public Cliente getCliente(Pedido pedido);
+	public void agregarPedido(int idPedido, double montoTotal, String cli_ruc) throws Exception;
 	
 	public void aprobarPedido(Pedido pedido);
 	
 	public void observarPedido(Pedido pedido);
 	
-	public boolean comprobarLineaCreditoCliente(Pedido pedido);
+	public Pedido getPedido(int idPedido);
+	
+	public List<Pedido> getPedidosTodos();
+	
+	public List<Pedido> getPedidosPendientes();
+	
+	public List<Pedido> getPedidosObservados();
+	
+	public List<Pedido> getPedidosAprobados();
+
 }

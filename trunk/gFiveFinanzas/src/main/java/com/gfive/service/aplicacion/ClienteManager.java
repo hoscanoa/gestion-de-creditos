@@ -14,13 +14,14 @@ public interface ClienteManager extends Serializable{
 	
 	public boolean comprobarLineaCredito(Cliente cliente, double monto);
 	
-	public void actualizarSaldoCredito(Cliente cliente, double monto);
+	public boolean comprobarLineaCredito(Pedido pedido);
 	
-	public List<Pedido> getPedidosTodos();
+	public Cliente getCliente(Pedido pedido);
 	
-	public List<Pedido> getPedidosPendientes();
+	public Cliente getCliente(String ruc);
 	
-	public List<Pedido> getPedidosObservados();
+	public void actualizarSaldoCredito(Cliente cliente, double reduccion);
 	
-	public List<Pedido> getPedidosAprobados();
+	
+
 }

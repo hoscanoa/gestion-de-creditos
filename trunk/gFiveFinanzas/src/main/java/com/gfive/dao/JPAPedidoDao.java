@@ -26,16 +26,19 @@ public class JPAPedidoDao implements PedidoDao {
 
 	@Transactional(readOnly = true)
 	@SuppressWarnings("unchecked")
-	public Pedido getPedido(int idPedido) throws Exception {
+	public Pedido getPedido(int idPedido) throws Exception{
 		Query query = em
 				.createQuery("select p from Pedido p where p.idPedido = ?");
 		query.setParameter(1, idPedido);
 		List<Pedido> pedidos = query.getResultList();
-		if (pedidos.size() != 1) {
-			throw new Exception("pedido no encontrado");
+		if (pedidos.size() < 1) {
+			return null;
 		} else {
-			return pedidos.get(0);
-
+			if (pedidos.size() > 1){
+				throw new Exception("pedido duplicado en BD");
+			} else {
+				return pedidos.get(0);
+			}
 		}
 	}
 
