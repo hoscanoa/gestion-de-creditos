@@ -40,7 +40,22 @@ public class JPAClienteDaoTests {
         Cliente resultado = clienteDao.getCliente(testCliente.getCli_ruc());
         Assert.assertEquals(resultado.getCli_ruc(),"10203040502");
         clienteDao.eliminarCliente(resultado);
+        testCliente.setCli_ruc("10203040501");
         
+    }
+	
+	@Test
+    public void actualizarCliente() throws Exception {
+
+        testCliente.setCli_lineaCreditoSaldo(70000.00f);
+        testCliente.setCli_lineaCreditoTotal(90000.00f);
+        clienteDao.actualizarCliente(testCliente);
+        Cliente resultado = clienteDao.getCliente(testCliente.getCli_ruc());
+        Assert.assertEquals(resultado.getCli_lineaCreditoSaldo(),70000.00, 0.0);
+        Assert.assertEquals(resultado.getCli_lineaCreditoTotal(),90000.00, 0.0);  
+        testCliente.setCli_lineaCreditoSaldo(50000.00f);
+        testCliente.setCli_lineaCreditoTotal(50000.00f);
+        clienteDao.actualizarCliente(testCliente);
     }
     
 }

@@ -9,10 +9,12 @@ import javax.persistence.Query;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.gfive.domain.Cliente;
+import com.gfive.domain.Pedido;
 import com.gfive.domain.Usuario;
 
 @Repository(value = "pedidoDao")
-public class JPAPedidoDao implements UsuarioDao {
+public class JPAPedidoDao implements PedidoDao {
 
 	private EntityManager em = null;
 
@@ -26,22 +28,63 @@ public class JPAPedidoDao implements UsuarioDao {
 
 	@Transactional(readOnly = true)
 	@SuppressWarnings("unchecked")
-	public Usuario getUsuario(String nombre, String password) throws Exception {
-		// Query query =
-		// em.createNativeQuery("execute usp_comprobarUsuario'cesar','cesar','1','0',''");
-		// query.setParameter(1, usuario.getUsuario());
-		// query.setParameter(2, usuario.getContraseña());
+	public Pedido getPedido(int idPedido) throws Exception {
 		Query query = em
-				.createQuery("select p from Usuario p where p.nombreUsuario = ? AND p.contraseña = ?");
-		query.setParameter(1, nombre);
-		query.setParameter(2, password);
-		List<Usuario> usuarios = query.getResultList();
-		if (usuarios.size() != 1) {
-			throw new Exception("usuario no encontrado");
+				.createQuery("select p from Pedido p where p.idPedido = ?");
+		query.setParameter(1, idPedido);
+		List<Pedido> pedidos = query.getResultList();
+		if (pedidos.size() != 1) {
+			throw new Exception("pedido no encontrado");
 		} else {
-			return usuarios.get(0);
+			return pedidos.get(0);
 
 		}
+	}
 
+	@Transactional(readOnly = false)
+	public void grabarPedido(Pedido pedido) {
+		em.merge(pedido);
+		
+	}
+
+	@Transactional(readOnly = false)
+	public void actualizarPedido(Pedido pedido) {
+		Query query = em
+				.createQuery("UPDATE Pedido p SET p.situacion = ? WHERE p.idPedido = ?");
+		query.setParameter(1, pedido.getSituacion());
+		query.setParameter(2, pedido.getIdPedido());
+		query.executeUpdate();
+		
+	}
+
+	@SuppressWarnings("unchecked")
+	@Transactional(readOnly = true)
+	public List<Pedido> getPedidosAprobados() {
+		return em.createQuery("select p from Pedido p where p.situacion = 'aprobado' order by p.idPedido").getResultList();
+	}
+
+	@SuppressWarnings("unchecked")
+	@Transactional(readOnly = true)
+	public List<Pedido> getPedidosObservados() {
+		return em.createQuery("select p from Pedido p where p.situacion = 'observado' order by p.idPedido").getResultList();
+	}
+
+	@SuppressWarnings("unchecked")
+	@Transactional(readOnly = true)
+	public List<Pedido> getPedidosPendientes() {
+		return em.createQuery("select p from Pedido p where p.situacion = 'pendiente' order by p.idPedido").getResultList();
+	}
+
+	@SuppressWarnings("unchecked")
+	@Transactional(readOnly = true)
+	public List<Pedido> getPedidosTodos() {
+		return em.createQuery("select p from Pedido p order by p.idPedido").getResultList();
+	}
+
+	@Transactional(readOnly = false)
+	public void eliminarPedido(Pedido pedido) {
+		Query query = em
+				.createQuery("DELETE FROM Pedido p WHERE p.idPedido = ?");
+		query.setParameter(1, pedido.getIdPedido()).executeUpdate();
 	}
 }
