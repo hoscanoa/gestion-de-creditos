@@ -19,5 +19,7 @@ public interface PedidoDao {
 	public List<Pedido> getPedidosPendientes();
 	
 	public List<Pedido> getPedidosTodos();
+	
+	public void eliminarPedido(Pedido pedido);
 
 }

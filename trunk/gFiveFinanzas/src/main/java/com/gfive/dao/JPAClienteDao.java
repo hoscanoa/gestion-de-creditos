@@ -28,7 +28,7 @@ public class JPAClienteDao implements ClienteDao {
 	@SuppressWarnings("unchecked")
 	public Cliente getCliente(String ruc) throws Exception {
 		Query query = em
-				.createQuery("select p from Cliente p where p.cli_ruc = ?");
+				.createQuery("select c from Cliente c where c.cli_ruc = ?");
 		query.setParameter(1, ruc);
 		List<Cliente> clientes = query.getResultList();
 		if (clientes.size() != 1) {
@@ -47,10 +47,10 @@ public class JPAClienteDao implements ClienteDao {
 	@Transactional(readOnly = false)
 	public void actualizarCliente(Cliente cliente) {
 		Query query = em
-				.createQuery("UPDATE Cliente c SET c.cli_lineaCreditoTotal = ? and c.cli_lineaCreditoSaldo= ? WHERE p.cli_ruc = ?");
+				.createQuery("UPDATE Cliente c SET c.cli_lineaCreditoTotal = ?, c.cli_lineaCreditoSaldo= ? WHERE c.cli_ruc = ?");
 		query.setParameter(1, cliente.getCli_lineaCreditoTotal());
-		query.setParameter(1, cliente.getCli_lineaCreditoSaldo());
-		query.setParameter(1, cliente.getCli_ruc());
+		query.setParameter(2, cliente.getCli_lineaCreditoSaldo());
+		query.setParameter(3, cliente.getCli_ruc());
 		query.executeUpdate();
 
 	}
