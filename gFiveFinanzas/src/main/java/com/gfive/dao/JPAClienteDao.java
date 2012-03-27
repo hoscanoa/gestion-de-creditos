@@ -31,11 +31,14 @@ public class JPAClienteDao implements ClienteDao {
 				.createQuery("select c from Cliente c where c.cli_ruc = ?");
 		query.setParameter(1, ruc);
 		List<Cliente> clientes = query.getResultList();
-		if (clientes.size() != 1) {
-			throw new Exception("cliente no encontrado");
+		if (clientes.size() < 1) {
+			return null;
 		} else {
-			return clientes.get(0);
-
+			if (clientes.size() > 1){
+				throw new Exception("cliente duplicado en BD");
+			} else {
+				return clientes.get(0);
+			}
 		}
 	}
 
