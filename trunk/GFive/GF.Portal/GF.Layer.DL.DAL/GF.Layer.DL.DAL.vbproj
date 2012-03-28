@@ -94,6 +94,7 @@
     <Compile Include="DconnectionManager.vb" />
     <Compile Include="Dmodulo.vb" />
     <Compile Include="Dopciones.vb" />
+    <Compile Include="Dpedido.vb" />
     <Compile Include="Dpersonal.vb" />
     <Compile Include="Dproducto.vb" />
     <Compile Include="Dsubmodulo.vb" />
