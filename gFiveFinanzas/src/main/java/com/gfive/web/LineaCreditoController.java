@@ -25,20 +25,20 @@ public class LineaCreditoController {
 
 	@RequestMapping(value = "lineacredito", method = RequestMethod.GET)
 	public String getCliente(@RequestParam("id") Long id, Model model) {
-		logger.debug("Encuentra cliente con id: " + id);		
+		logger.debug("Encuentra cliente con id: " + id);
 		model.addAttribute("cliente", clienteManager.getCliente(id.toString()));
 		model.addAttribute("clienteAttribute", new Cliente());
 		return "lineacredito";
 	}
-	
+
 	@RequestMapping(value = "lineacredito", method = RequestMethod.POST)
-	public @ResponseBody String updatePerson(@RequestParam("id") Long id, 
+	public String updatePerson(@RequestParam(value="id",  required=true) Long id,
 			@RequestBody Cliente cliente) {
-		logger.debug("Actualizar linea de credito de cliente");		
+		logger.debug("Actualizar linea de credito de cliente");
 		cliente.setCli_ruc(id.toString());
 		clienteManager.aumentarLineaCredito(cliente, 999);
-		return "home";
-    }
+		return "vistaclientes";
+	}
 
 	public void setClienteManager(ClienteManager clienteManager) {
 		this.clienteManager = clienteManager;
