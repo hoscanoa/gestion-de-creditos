@@ -151,6 +151,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="procesos\pedido.aspx.designer.vb">
+      <DependentUpon>pedido.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="procesos\pedido.aspx.vb">
+      <DependentUpon>pedido.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="seguridad\bienvenida.aspx.designer.vb">
       <DependentUpon>bienvenida.aspx</DependentUpon>
     </Compile>
@@ -178,6 +185,24 @@
     <Compile Include="tablas\producto.aspx.vb">
       <DependentUpon>producto.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Web References\WSCliente\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WSProducto\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WebService\WSClienteObtener.asmx.vb">
+      <DependentUpon>WSClienteObtener.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebService\WSProductoStock.asmx.vb">
+      <DependentUpon>WSProductoStock.asmx</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -221,11 +246,26 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+    <Content Include="procesos\pedido.aspx" />
     <Content Include="seguridad\bienvenida.aspx" />
     <Content Include="seguridad\login.aspx" />
     <Content Include="tablas\cliente.aspx" />
     <Content Include="tablas\producto.aspx" />
+    <None Include="Web References\WSCliente\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\WSCliente\WSClienteObtener.wsdl" />
+    <None Include="Web References\WSProducto\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\WSProducto\WSProductoStock.disco" />
+    <None Include="Web References\WSProducto\WSProductoStock.wsdl" />
+    <None Include="Web References\WSCliente\WSClienteObtener.disco" />
     <Content Include="Web.config" />
+    <Content Include="WebService\WSClienteObtener.asmx" />
+    <Content Include="WebService\WSProductoStock.asmx" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GF.Layer.BL.BC\GF.Layer.BL.BC.vbproj">
@@ -240,6 +280,36 @@
       <Project>{42460BD1-69BF-46DE-A21B-470135493FC4}</Project>
       <Name>GF.Layer.DL.DAL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:1046/WebService/WSClienteObtener.asmx%3fop=ClienteObtener">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WSCliente\</RelPath>
+      <UpdateFromURL>http://localhost:1046/WebService/WSClienteObtener.asmx%3fop=ClienteObtener</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>GF_Portal_UI_WEB_WSCliente_WSClienteObtener</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:1046/WebService/WSProductoStock.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WSProducto\</RelPath>
+      <UpdateFromURL>http://localhost:1046/WebService/WSProductoStock.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>GF_Portal_UI_WEB_WSProducto_WSProductoStock</CachedSettingsPropName>
+    </WebReferenceUrl>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
