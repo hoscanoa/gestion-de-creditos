@@ -109,6 +109,7 @@
     <Compile Include="Rcliente.vb" />
     <Compile Include="Rmodulos.vb" />
     <Compile Include="Ropciones.vb" />
+    <Compile Include="Rpedido.vb" />
     <Compile Include="Rpersonal.vb" />
     <Compile Include="Rproducto.vb" />
     <Compile Include="Rsubmodulos.vb" />

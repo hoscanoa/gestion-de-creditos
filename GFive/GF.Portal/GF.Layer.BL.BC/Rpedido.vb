@@ -1,4 +1,5 @@
 ﻿Public Class Rpedido
+
     Public Shared Function AñadirEncabezado(ByVal BE_Pedido As Epedido) As Integer()
         Dim resultado() As Integer
 
@@ -17,6 +18,7 @@
 
         Return resultado
     End Function
+
     Public Shared Function AñadirDetalle(ByVal BE_Pedido As Epedido) As Integer()
         Dim resultado() As Integer
 
@@ -35,4 +37,5 @@
 
         Return resultado
     End Function
+
 End Class
