@@ -3,11 +3,6 @@
 <html>
 <head>
 <title><fmt:message key="title" /></title>
-<style>
-.error {
-	color: red;
-}
-</style>
 </head>
 <body>
 
@@ -18,12 +13,12 @@
 		<table>
 			<tr>
 				<td><label>Nombre de Usuario:</label></td>
-				<td><input type="text" name="user"/></td>
+				<td><input type="text" name="user" /></td>
 			</tr>
 
 			<tr>
 				<td><label>Contraseña:</label></td>
-				<td><input type = "password" name="pass"/></td>
+				<td><input type="password" name="pass" /></td>
 			</tr>
 		</table>
 
