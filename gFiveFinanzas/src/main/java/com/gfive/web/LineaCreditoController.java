@@ -31,8 +31,8 @@ public class LineaCreditoController {
 		return "lineacredito";
 	}
 	
-	@RequestMapping(value = "lineacredito/{id}", method = RequestMethod.POST)
-	public @ResponseBody String updatePerson(@PathVariable("id") Long id, 
+	@RequestMapping(value = "lineacredito", method = RequestMethod.POST)
+	public @ResponseBody String updatePerson(@RequestParam("id") Long id, 
 			@RequestBody Cliente cliente) {
 		logger.debug("Actualizar linea de credito de cliente");		
 		cliente.setCli_ruc(id.toString());

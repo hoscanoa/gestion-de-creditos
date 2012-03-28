@@ -31,7 +31,7 @@ Clientes
 			<td><c:out value="${cliente.cli_razonSocial}" /></td>
 			<td><c:out value="${cliente.cli_lineaCreditoTotal}" /></td>
 			<td><c:out value="${cliente.cli_lineaCreditoSaldo}" /></td>
-<%-- 			<td><a href="${lineacreditoUrl}">Administrar línea de crédito</a></td> --%>
+			<td><a href="${lineacreditoUrl}">Administrar línea de crédito</a></td>
 		</tr>
 	</c:forEach>
 	</tbody>

@@ -67,3 +67,31 @@ INSERT INTO [BDGFiveFinanzas].[dbo].[Pedido]
            ,'10203040501'
            ,1)
 GO
+
+INSERT INTO [BDGFiveFinanzas].[dbo].[Pedido]
+      ([idPedido]
+      ,[situacion]
+      ,[montoTotal]
+      ,[cli_ruc]
+      ,[estado])
+     VALUES
+           (90003
+           ,'observado'
+           ,20000.00
+           ,'10203040501'
+           ,1)
+GO
+
+INSERT INTO [BDGFiveFinanzas].[dbo].[Pedido]
+      ([idPedido]
+      ,[situacion]
+      ,[montoTotal]
+      ,[cli_ruc]
+      ,[estado])
+     VALUES
+           (90004
+           ,'aprobado'
+           ,20000.00
+           ,'10203040501'
+           ,1)
+GO
