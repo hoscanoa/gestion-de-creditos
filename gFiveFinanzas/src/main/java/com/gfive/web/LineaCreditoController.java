@@ -32,12 +32,13 @@ public class LineaCreditoController {
 	}
 
 	@RequestMapping(value = "lineacredito", method = RequestMethod.POST)
-	public String updatePerson(@RequestParam(value="id",  required=true) Long id,
-			@RequestBody Cliente cliente) {
+	public String updatePerson(@RequestParam(value="id",  required=true) String id,
+			Cliente cliente) {		
 		logger.debug("Actualizar linea de credito de cliente");
-		cliente.setCli_ruc(id.toString());
-		clienteManager.aumentarLineaCredito(cliente, 999);
-		return "vistaclientes";
+		Cliente cl = clienteManager.getCliente(id);
+		double incremento = cliente.getCli_lineaCreditoTotal() - cl.getCli_lineaCreditoTotal();		
+		clienteManager.aumentarLineaCredito(cl, incremento);
+		return "home";
 	}
 
 	public void setClienteManager(ClienteManager clienteManager) {
