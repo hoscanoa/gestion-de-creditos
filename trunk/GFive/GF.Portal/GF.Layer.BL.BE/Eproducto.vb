@@ -5,6 +5,7 @@ Public Class Eproducto
     Private _pro_id As String
     Private _pro_descripcion As String
     Private _pro_costo As Decimal
+    Private _pro_stock As Integer
     Private _estado As String
     Private _desEstado As String
     Private _idUsuario As Int32
@@ -33,6 +34,14 @@ Public Class Eproducto
         End Get
         Set(ByVal value As Decimal)
             _pro_costo = value
+        End Set
+    End Property
+    Public Property pro_stock() As Integer
+        Get
+            Return _pro_stock
+        End Get
+        Set(ByVal value As Integer)
+            _pro_stock = value
         End Set
     End Property
     Public Property estado() As String
@@ -69,11 +78,25 @@ Public Class Eproducto
         Me.pro_id = pro_id
         Me.pro_descripcion = pro_descripcion
     End Sub
+    Public Sub New(ByVal pro_id As String, ByVal pro_stock As Integer)
+        Me.pro_id = pro_id
+        Me.pro_stock = pro_stock
+    End Sub
     Public Sub New(ByVal pro_id As String, ByVal pro_descripcion As String, ByVal pro_costo As Decimal, _
                    ByVal estado As String, ByVal idUsuario As Integer)
         Me.pro_id = pro_id
         Me.pro_descripcion = pro_descripcion
         Me.pro_costo = pro_costo
+        Me.estado = estado
+        Me.desEstado = IIf(estado = 1, "HABILITADO", "DESHABILITADO")
+        Me.idUsuario = idUsuario
+    End Sub
+    Public Sub New(ByVal pro_id As String, ByVal pro_descripcion As String, ByVal pro_costo As Decimal, _
+                   ByVal pro_stock As Integer, ByVal estado As String, ByVal idUsuario As Integer)
+        Me.pro_id = pro_id
+        Me.pro_descripcion = pro_descripcion
+        Me.pro_costo = pro_costo
+        Me.pro_stock = pro_stock
         Me.estado = estado
         Me.desEstado = IIf(estado = 1, "HABILITADO", "DESHABILITADO")
         Me.idUsuario = idUsuario

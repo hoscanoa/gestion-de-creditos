@@ -95,6 +95,7 @@
     <Compile Include="Eopciones.vb" />
     <Compile Include="EparametroSist.vb" />
     <Compile Include="EparametroSistDet.vb" />
+    <Compile Include="Epedido.vb" />
     <Compile Include="EperfilUsuario.vb" />
     <Compile Include="Epersonal.vb" />
     <Compile Include="Eproducto.vb" />
