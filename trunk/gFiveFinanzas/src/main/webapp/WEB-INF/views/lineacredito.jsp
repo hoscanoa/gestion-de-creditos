@@ -9,14 +9,13 @@
 <body>
 	Linea de credito
 
-	<c:url var="actualizarUrl" value="/gfive/lineacredito?id=${clienteAtributo.cli_ruc}" />
+	<c:url var="actualizarUrl" value="/gfive/lineacredito?id=${cliente.cli_ruc}" />
 	<c:if test="${empty cliente}">
 		No existe el cliente!
 	</c:if>
 
 	<c:if test="${!empty cliente}">
-		<form:form modelAttribute="cliente" method="POST"
-			action="${actualizarUrl}">
+		<form:form modelAttribute="cliente" method="POST" action="${actualizarUrl}">
 			<table>
 				<tr>
 					<td><form:label path="cli_ruc">RUC</form:label></td>
@@ -35,7 +34,7 @@
 
 				<tr>
 					<td><form:label path="cli_lineaCreditoSaldo">Saldo:</form:label></td>
-					<td><form:label path="cli_lineaCreditoSaldo">${cliente.cli_lineaCreditoSaldo}</form:label></td>
+					<td><form:input disabled="true" path="cli_lineaCreditoSaldo" /></td>
 				</tr>
 			</table>
 			<input type="submit" value="Actualizar" />

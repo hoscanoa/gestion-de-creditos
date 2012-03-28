@@ -1,4 +1,4 @@
-package com.gfive.domain;
+package com.gfive.domain.rest;
 
 import java.util.List;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -6,13 +6,13 @@ import javax.xml.bind.annotation.XmlRootElement;
 	@XmlRootElement(name="pedidos")
 	public class PedidoList {
 
-		private List<Pedido> data;
+		private List<PedidoRest> data;
 
-		public List<Pedido> getData() {
+		public List<PedidoRest> getData() {
 			return data;
 		}
 
-		public void setData(List<Pedido> data) {
+		public void setData(List<PedidoRest> data) {
 			this.data = data;
 		}
 	}
