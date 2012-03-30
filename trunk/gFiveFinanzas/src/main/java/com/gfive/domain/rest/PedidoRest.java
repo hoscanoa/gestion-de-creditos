@@ -14,6 +14,8 @@ public class PedidoRest implements Serializable{
 	
 	private int idPedido;
 	private String situacion;
+	private String cli_ruc;
+	private float montoTotal;
 	
 	public int getIdPedido() {
 		return idPedido;
@@ -26,6 +28,18 @@ public class PedidoRest implements Serializable{
 	}
 	public void setSituacion(String situacion) {
 		this.situacion = situacion;
+	}
+	public String getCli_ruc() {
+		return cli_ruc;
+	}
+	public void setCli_ruc(String cli_ruc) {
+		this.cli_ruc = cli_ruc;
+	}
+	public float getMontoTotal() {
+		return montoTotal;
+	}
+	public void setMontoTotal(float montoTotal) {
+		this.montoTotal = montoTotal;
 	}
 	
 }
