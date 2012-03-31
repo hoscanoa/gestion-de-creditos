@@ -7,7 +7,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import com.gfive.domain.Cliente;
+import com.gfive.domain.Pedido;
 import com.gfive.service.aplicacion.PedidoManager;
 
 @Controller
@@ -21,6 +24,15 @@ public class PedidosPendientesController {
 	@RequestMapping(value = "pedidospendientes", method = RequestMethod.GET)	
 	public String getAll(Model model) {
 		logger.debug("Lee todos los pedidos pendientes de la BD");
+		model.addAttribute("pendientes", pedidoManager.getPedidosPendientes());
+		return "pedidospendientes";
+	}
+	
+	@RequestMapping(value = "observar", method = RequestMethod.GET)
+	public String observarPedido(@RequestParam(value="id",  required=true) Integer id, Model model) {
+		logger.debug("Observa pedido con id: " + id);
+		Pedido pedido = pedidoManager.getPedido(id);
+		pedidoManager.observarPedido(pedido);
 		model.addAttribute("pendientes", pedidoManager.getPedidosPendientes());
 		return "pedidospendientes";
 	}

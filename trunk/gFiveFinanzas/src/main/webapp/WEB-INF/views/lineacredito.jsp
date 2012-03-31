@@ -41,7 +41,8 @@
 		</form:form>
 	</c:if>
 
-	<a href="javascript:window.history.go(-1);">Regresar</a>
+	<c:url var="homeUrl" value="/gfive/home" />
+	<a href="${homeUrl}">Regresar</a>
 
 </body>
 </html>

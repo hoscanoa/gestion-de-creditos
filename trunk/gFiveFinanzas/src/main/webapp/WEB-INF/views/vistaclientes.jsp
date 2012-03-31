@@ -26,23 +26,21 @@ Clientes
 	<tbody>
 	<c:forEach items="${clientes}" var="cliente">
 			<c:url var="lineacreditoUrl" value="/gfive/lineacredito?id=${cliente.cli_ruc}" />
-		<tr>
+					<tr>
 			<td><c:out value="${cliente.cli_ruc}" /></td>
 			<td><c:out value="${cliente.cli_razonSocial}" /></td>
 			<td><c:out value="${cliente.cli_lineaCreditoTotal}" /></td>
 			<td><c:out value="${cliente.cli_lineaCreditoSaldo}" /></td>
-			<td><a href="${lineacreditoUrl}">Administrar línea de crédito</a></td>
+			<td><a href="${lineacreditoUrl}">Administrar línea de crédito</a></td>			
 		</tr>
 	</c:forEach>
 	</tbody>
 </table>
 </c:if>
 
-<%-- <c:url var="addUrl" value="/krams/add" /> --%>
-<%-- <a href="${addUrl}">Agregar cliente</a> --%>
-
 <br>
-<a href="javascript:window.history.go(-1);">Regresar</a>
+<c:url var="homeUrl" value="/gfive/home" />
+<a href="${homeUrl}">Regresar</a>
 
 </body>
 </html>
