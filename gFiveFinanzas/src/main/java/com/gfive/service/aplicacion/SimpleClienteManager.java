@@ -31,9 +31,7 @@ public class SimpleClienteManager implements ClienteManager {
 		return flag;
 	}
 
-	public void agregarCliente(String cli_ruc, String cli_razonSocial,
-			float cli_lineaCreditoTotal) {
-		try {
+	public boolean agregarCliente(String cli_ruc, String cli_razonSocial,float cli_lineaCreditoTotal) {
 			if (clienteExiste(cli_ruc)) {
 				Cliente cliente = new Cliente();
 				cliente.setCli_ruc(cli_ruc);
@@ -42,13 +40,11 @@ public class SimpleClienteManager implements ClienteManager {
 				cliente.setCli_lineaCreditoSaldo(cli_lineaCreditoTotal);
 				cliente.setEstado("1");
 				clienteDao.grabarCliente(cliente);
+				return true;
 			} else {
-				throw new Exception("cliente ya existe");
+				System.out.println("cliente ya existe");
+				return false;
 			}
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
 		
 	}
 

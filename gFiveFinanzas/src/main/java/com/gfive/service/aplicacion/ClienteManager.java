@@ -8,7 +8,7 @@ import com.gfive.domain.Pedido;
 
 public interface ClienteManager extends Serializable{
 	
-	public void agregarCliente(String cli_ruc, String cli_razonSocial, float cli_lineaCreditoTotal);
+	public boolean agregarCliente(String cli_ruc, String cli_razonSocial, float cli_lineaCreditoTotal);
 	
 	public void aumentarLineaCredito(Cliente cliente, double incremento);
 	

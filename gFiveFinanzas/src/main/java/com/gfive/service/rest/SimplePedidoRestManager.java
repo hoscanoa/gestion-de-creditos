@@ -11,10 +11,14 @@ import com.gfive.dao.PedidoDao;
 import com.gfive.domain.Pedido;
 import com.gfive.domain.rest.PedidoList;
 import com.gfive.domain.rest.PedidoRest;
+import com.gfive.service.aplicacion.SimpleClienteManager;
 
 @Component
 @Service("pedidoRestManager")
 public class SimplePedidoRestManager implements PedidoRestManager {
+	
+	@Autowired
+	private SimpleClienteManager clienteManager;
 	
 	@Autowired
 	private PedidoDao pedidoDao;
@@ -83,7 +87,6 @@ public class SimplePedidoRestManager implements PedidoRestManager {
 		return pl;
 	}
 
-	@Override
 	public void agregarNuevos(List<PedidoRest> listaPedidos) {
 		List<Pedido> existentes = pedidoDao.getPedidosTodos();
 		for(PedidoRest pedidoNuevo: listaPedidos){
@@ -96,6 +99,7 @@ public class SimplePedidoRestManager implements PedidoRestManager {
 					p.setSituacion(pedidoNuevo.getSituacion());
 					p.setEstado("1");
 					pedidoDao.grabarPedido(p);
+					clienteManager.agregarCliente(p.getCli_ruc(), "default", 0);					
 				} else {
 					System.out.println("Pedido "+ pedidoNuevo + " ya existe");
 				}
