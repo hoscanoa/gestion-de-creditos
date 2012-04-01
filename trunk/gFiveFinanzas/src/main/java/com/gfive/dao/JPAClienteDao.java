@@ -10,7 +10,6 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.gfive.domain.Cliente;
-import com.gfive.domain.Pedido;
 
 @Repository(value = "clienteDao")
 public class JPAClienteDao implements ClienteDao {
@@ -26,7 +25,6 @@ public class JPAClienteDao implements ClienteDao {
 	}
 
 	@Transactional(readOnly = true)
-	@SuppressWarnings("unchecked")
 	public Cliente getCliente(String ruc) throws Exception {
 		Query query = em
 				.createQuery("select c from Cliente c where c.cli_ruc = ? order by c.cli_ruc");

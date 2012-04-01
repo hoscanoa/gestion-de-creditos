@@ -22,6 +22,8 @@ public interface ClienteManager extends Serializable{
 	
 	public void actualizarSaldoCredito(Cliente cliente, double reduccion);
 	
+	public void actualizarSaldoCredito(Pedido pedido);
+	
 	public List<Cliente> getClientes();
 	
 	

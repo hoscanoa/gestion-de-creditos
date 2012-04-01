@@ -45,10 +45,17 @@ public class RestProveedorController {
 	}
 
 	@RequestMapping(value = "/pedidos", method = RequestMethod.POST, headers = "Accept=application/xml, application/json")
-	public @ResponseBody void addPerson(@RequestBody PedidoList listaPedidos) {
+	public @ResponseBody void addPedidos(@RequestBody PedidoList listaPedidos) {
 		logger.debug("Finanzas ha recibido solicitud para agregar nuevos pedidos");
 
 		pedidoRestManager.agregarNuevos(listaPedidos.getData());
+	}
+	
+	@RequestMapping(value = "/pedido", method = RequestMethod.POST, headers="Accept=application/xml, application/json")
+	public @ResponseBody void addPedido(@RequestBody PedidoRest pedidoRest) {
+		logger.debug("Finanzas ha recibido solicitud para agregar un nuevos pedido");
+		
+		pedidoRestManager.agregarNuevo(pedidoRest);
 	}
 
 }

@@ -1,5 +1,6 @@
 package com.gfive.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Assert;
@@ -66,6 +67,20 @@ public class JPAPedidoDaoTests {
 		List<Pedido> listaObservados = pedidoDao.getPedidosObservados();
 		Assert.assertNotNull(listaTodos);
 		Assert.assertEquals(listaAprobados.size()+listaPendientes.size()+listaObservados.size(),listaTodos.size());
+	}
+	
+	@Test
+	public void getPedidosPendientesPorCliente() throws Exception {
+
+		List<Pedido> listaPendientes = pedidoDao.getPedidosPendientes();
+		List<Pedido> listaPendientesPorCliente = pedidoDao.getPedidosPendientesPorCliente("10203040501");
+		List<Pedido> result = new ArrayList<Pedido>();
+		for(Pedido pedido:listaPendientes){
+			if(pedido.getCli_ruc().equals("10203040501")){
+				result.add(pedido);
+			}
+		}
+		Assert.assertEquals(listaPendientesPorCliente.size(),result.size());
 	}
 
 }

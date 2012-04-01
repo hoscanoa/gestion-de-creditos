@@ -15,6 +15,9 @@ public class SimplePedidoManager implements PedidoManager {
 
 	@Autowired
 	private PedidoDao pedidoDao;
+	
+	@Autowired
+	private ClienteManager clienteManager;
 
 	public void setPedidoDao(PedidoDao pedidoDao) {
 		this.pedidoDao = pedidoDao;
@@ -52,11 +55,16 @@ public class SimplePedidoManager implements PedidoManager {
 		}
 	}
 
-	public void aprobarPedido(Pedido pedido) {
+	public boolean aprobarPedido(Pedido pedido) {
 		if (pedidoExiste(pedido.getIdPedido())
-				&& pedido.getSituacion().equals("pendiente")) {
+				&& pedido.getSituacion().equals("pendiente") 
+				&& clienteManager.comprobarLineaCredito(pedido)) {
+			clienteManager.actualizarSaldoCredito(pedido);
 			pedido.setSituacion("aprobado");
 			pedidoDao.actualizarPedido(pedido);
+			return true;
+		} else{
+			return false;
 		}
 	}
 
@@ -90,6 +98,17 @@ public class SimplePedidoManager implements PedidoManager {
 
 	public List<Pedido> getPedidosAprobados() {
 		return pedidoDao.getPedidosAprobados();
+	}
+
+	private List<Pedido> getPedidosPendientesPorCliente(String cli_ruc) {
+		return pedidoDao.getPedidosPendientesPorCliente(cli_ruc);
+	}
+
+	public void aprobarPendientesPorCliente(String cli_ruc) {
+		List<Pedido> comprometidos = getPedidosPendientesPorCliente(cli_ruc);
+		for(Pedido pedido: comprometidos){
+			aprobarPedido(pedido);
+		}
 	}
 
 }

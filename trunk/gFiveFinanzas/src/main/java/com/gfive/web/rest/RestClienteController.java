@@ -2,6 +2,9 @@ package com.gfive.web.rest;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.annotation.Resource;
+
 import org.apache.log4j.Logger;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -10,18 +13,13 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.client.RestTemplate;
 
 import com.gfive.domain.rest.PedidoList;
 import com.gfive.domain.rest.PedidoRest;
 import com.gfive.service.rest.PedidoRestManager;
-
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletResponse;
 
 @Controller
 public class RestClienteController {

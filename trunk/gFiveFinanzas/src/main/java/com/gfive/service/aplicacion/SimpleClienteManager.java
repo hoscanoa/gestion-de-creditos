@@ -97,6 +97,12 @@ public class SimpleClienteManager implements ClienteManager {
 		clienteDao.actualizarCliente(cliente);
 	}
 	
+	public void actualizarSaldoCredito(Pedido pedido) {
+		Cliente cliente = getCliente(pedido);
+		cliente.setCli_lineaCreditoSaldo(cliente.getCli_lineaCreditoSaldo() - (float)pedido.getMontoTotal());
+		clienteDao.actualizarCliente(cliente);
+	}
+	
 	public List<Cliente> getClientes() {
 		return clienteDao.getClientes();
 	}

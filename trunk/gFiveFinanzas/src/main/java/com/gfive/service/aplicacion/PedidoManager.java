@@ -3,14 +3,13 @@ package com.gfive.service.aplicacion;
 import java.io.Serializable;
 import java.util.List;
 
-import com.gfive.domain.Cliente;
 import com.gfive.domain.Pedido;
 
 public interface PedidoManager extends Serializable{
 	
 	public void agregarPedido(int idPedido, double montoTotal, String cli_ruc) throws Exception;
 	
-	public void aprobarPedido(Pedido pedido);
+	public boolean aprobarPedido(Pedido pedido);
 	
 	public void observarPedido(Pedido pedido);
 	
@@ -23,6 +22,8 @@ public interface PedidoManager extends Serializable{
 	public List<Pedido> getPedidosObservados();
 	
 	public List<Pedido> getPedidosAprobados();
+	
+	public void aprobarPendientesPorCliente(String cli_ruc);
 	
 	
 
