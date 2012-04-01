@@ -23,8 +23,8 @@ public class JPAClienteDaoTests {
         testCliente = new Cliente();
         testCliente.setCli_ruc("10203040501");
         testCliente.setCli_razonSocial("CLIENTE DE PRUEBA");
-        testCliente.setCli_lineaCreditoTotal(50000.00f);
-        testCliente.setCli_lineaCreditoSaldo(50000.00f);
+        testCliente.setCli_lineaCreditoTotal(10000.00f);
+        testCliente.setCli_lineaCreditoSaldo(10000.00f);
         testCliente.setEstado("1");        
     }
 
@@ -56,8 +56,8 @@ public class JPAClienteDaoTests {
         Cliente resultado = clienteDao.getCliente(testCliente.getCli_ruc());
         Assert.assertEquals(resultado.getCli_lineaCreditoSaldo(),70000.00, 0.0);
         Assert.assertEquals(resultado.getCli_lineaCreditoTotal(),90000.00, 0.0);  
-        testCliente.setCli_lineaCreditoSaldo(50000.00f);
-        testCliente.setCli_lineaCreditoTotal(50000.00f);
+        testCliente.setCli_lineaCreditoSaldo(10000.00f);
+        testCliente.setCli_lineaCreditoTotal(10000.00f);
         clienteDao.actualizarCliente(testCliente);
     }
 	

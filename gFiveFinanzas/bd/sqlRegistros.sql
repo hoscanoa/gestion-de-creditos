@@ -35,8 +35,8 @@ INSERT INTO [BDGFiveFinanzas].[dbo].[Cliente]
      VALUES
            ('10203040501'
            ,'CLIENTE DE PRUEBA'
-           ,50000.00
-           ,50000.00
+           ,10000.00
+           ,10000.00
            ,1)
 GO
 

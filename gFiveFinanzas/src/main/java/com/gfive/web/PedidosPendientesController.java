@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.gfive.domain.Cliente;
 import com.gfive.domain.Pedido;
 import com.gfive.service.aplicacion.PedidoManager;
 

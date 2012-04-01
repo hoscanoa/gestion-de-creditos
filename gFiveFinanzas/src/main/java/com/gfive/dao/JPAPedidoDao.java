@@ -88,4 +88,14 @@ public class JPAPedidoDao implements PedidoDao {
 				.createQuery("DELETE FROM Pedido p WHERE p.idPedido = ?");
 		query.setParameter(1, pedido.getIdPedido()).executeUpdate();
 	}
+
+	@SuppressWarnings("unchecked")
+	@Transactional(readOnly = true)
+	public List<Pedido> getPedidosPendientesPorCliente(String cli_ruc) {
+		Query query = em
+				.createQuery("select p from Pedido p WHERE p.cli_ruc = ? AND p.situacion = 'pendiente' order by p.idPedido");
+		query.setParameter(1, cli_ruc);
+		return query.getResultList();
+	}
+	
 }

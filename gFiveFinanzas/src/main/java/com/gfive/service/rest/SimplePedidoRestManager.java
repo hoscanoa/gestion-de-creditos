@@ -88,25 +88,37 @@ public class SimplePedidoRestManager implements PedidoRestManager {
 	}
 
 	public void agregarNuevos(List<PedidoRest> listaPedidos) {
-		List<Pedido> existentes = pedidoDao.getPedidosTodos();
-		for(PedidoRest pedidoNuevo: listaPedidos){
-			for(Pedido pedidoExistente: existentes){
-				if(pedidoNuevo.getIdPedido() != pedidoExistente.getIdPedido()){
-					Pedido p = new Pedido();
-					p.setIdPedido(pedidoNuevo.getIdPedido());
-					p.setCli_ruc(pedidoNuevo.getCli_ruc());
-					p.setMontoTotal(pedidoNuevo.getMontoTotal());
-					p.setSituacion(pedidoNuevo.getSituacion());
-					p.setEstado("1");
-					pedidoDao.grabarPedido(p);
-					clienteManager.agregarCliente(p.getCli_ruc(), "default", 0);					
-				} else {
-					System.out.println("Pedido "+ pedidoNuevo + " ya existe");
-				}
-			}
+		for(PedidoRest pedidoRest: listaPedidos){
+			agregarNuevo(pedidoRest);
 		}
 		
 	}
 
+	public void agregarNuevo(PedidoRest pedidoRest) {
+		if(verificarExistenciaPedido(pedidoRest)){
+			Pedido p = new Pedido();
+			p.setIdPedido(pedidoRest.getIdPedido());
+			p.setCli_ruc(pedidoRest.getCli_ruc());
+			p.setMontoTotal(pedidoRest.getMontoTotal());
+			p.setSituacion(pedidoRest.getSituacion());
+			p.setEstado("1");
+			pedidoDao.grabarPedido(p);
+			if(!clienteManager.agregarCliente(p.getCli_ruc(), "default", 0)){
+				clienteManager.actualizarSaldoCredito(p);
+			}
+		} else {
+			System.out.println("pedido "+pedidoRest.getIdPedido()+ " ya existe");
+		}
+	}
+	
+	private boolean verificarExistenciaPedido(PedidoRest pedidoRest){
+		List<Pedido> existentes = pedidoDao.getPedidosTodos();
+		for(Pedido pedido: existentes){
+			if(pedido.getIdPedido() == pedidoRest.getIdPedido()){
+				return false;
+			}
+		}
+		return true;
+	}
 	
 }

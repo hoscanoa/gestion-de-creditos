@@ -20,5 +20,7 @@ public interface PedidoRestManager extends Serializable{
 	public PedidoList filtrarAprobados(PedidoList pedidoList);
 	
 	public void agregarNuevos(List<PedidoRest> listaPedidos);
+	
+	public void agregarNuevo(PedidoRest pedidoRest);
 
 }
