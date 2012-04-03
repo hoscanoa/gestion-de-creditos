@@ -7,8 +7,10 @@ Public Class Epedido
     Private _ped_fecha As String
     Private _ped_total As Integer
     Private _ped_pro_id As String
+    Private _pro_descripcion As String
     Private _ped_precio As Decimal
     Private _ped_cantidad As Integer
+    Private _ped_subtotal As Decimal
     Private _situacion As String
     Private _estado As String
     Private _desEstado As String
@@ -56,6 +58,14 @@ Public Class Epedido
             _ped_pro_id = value
         End Set
     End Property
+    Public Property pro_descripcion() As String
+        Get
+            Return _pro_descripcion
+        End Get
+        Set(ByVal value As String)
+            _pro_descripcion = value
+        End Set
+    End Property
     Public Property ped_precio() As Decimal
         Get
             Return _ped_precio
@@ -70,6 +80,14 @@ Public Class Epedido
         End Get
         Set(ByVal value As Integer)
             _ped_cantidad = value
+        End Set
+    End Property
+    Public Property ped_subTotal() As Decimal
+        Get
+            Return _ped_subtotal
+        End Get
+        Set(ByVal value As Decimal)
+            _ped_subtotal = value
         End Set
     End Property
     Public Property situacion() As String
