@@ -1,0 +1,30 @@
+<asp:GridView runat="server" SkinId="gvwListaSkin" CssClass="CssGvwLista"
+              Width="99%" AutoGenerateColumns="False" HeaderStyle-BackColor="#aaaadd" 
+              Font-Names="Verdana" font-size="9px" >
+    <RowStyle CssClass="RowStyleGridView"></RowStyle>
+    <EditRowStyle CssClass="EditrowStyleGridView"></EditRowStyle>
+    <SelectedRowStyle CssClass="SelectedRowStyleGridView"></SelectedRowStyle>
+    <PagerStyle CssClass="PagerStyleGridView"></PagerStyle>
+    <HeaderStyle CssClass="colGrilla"></HeaderStyle>
+    <AlternatingRowStyle CssClass="AlternatingRowStyleGridView"></AlternatingRowStyle>
+</asp:GridView>
+<asp:GridView runat="server" SkinId="gvwListaSkin2" CssClass="CssGvwLista"
+              Width="99%" AutoGenerateColumns="False" HeaderStyle-BackColor="#aaaadd" 
+              Font-Names="Verdana" font-size="9px" >
+    <RowStyle CssClass="RowStyleGridView"></RowStyle>
+    <EditRowStyle CssClass="EditrowStyleGridView"></EditRowStyle>
+    <SelectedRowStyle CssClass="SelectedRowStyleGridView"></SelectedRowStyle>
+    <PagerStyle CssClass="PagerStyleGridView"></PagerStyle>
+    <HeaderStyle CssClass="HeaderStyleGridView"></HeaderStyle>
+    <AlternatingRowStyle CssClass="AlternatingRowStyleGridView"></AlternatingRowStyle>
+</asp:GridView>
+<asp:GridView runat="server" SkinId="gvwListaSkinWith100P" CssClass="CssGvwLista"
+              Width="100%" AutoGenerateColumns="False" HeaderStyle-BackColor="#aaaadd" 
+              Font-Names="Verdana" font-size="9px" >
+    <RowStyle CssClass="RowStyleGridView"></RowStyle>
+    <EditRowStyle CssClass="EditrowStyleGridView"></EditRowStyle>
+    <SelectedRowStyle CssClass="SelectedRowStyleGridView"></SelectedRowStyle>
+    <PagerStyle CssClass="PagerStyleGridView"></PagerStyle>
+    <HeaderStyle CssClass="colGrilla"></HeaderStyle>
+    <AlternatingRowStyle CssClass="AlternatingRowStyleGridView"></AlternatingRowStyle>
+</asp:GridView>  

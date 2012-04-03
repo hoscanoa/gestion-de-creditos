@@ -1,0 +1,172 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="fgPortal.master.vb" Inherits="GF.Portal.UI.WEB.fgPortal" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+        <title>.:: GFive ::.</title>
+    <script language="jscript" type="text/javascript">
+        if (history.forward(1)) {
+            history.replace(history.forward(1));
+        }
+    </script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .cpHeader
+        {
+            color: white;
+            cursor: pointer;
+            padding: 1px;
+            width: 10px;
+            height: 10px;
+        }
+        .cpBody
+        {
+            background-color: #DCE4F9;
+            font: normal 11px auto Verdana, Arial;
+            border: 1px gray;
+            padding: 1px;
+            padding-top: 1px;
+        }
+    </style>
+</head>
+<body style="margin-top: 0px; margin-left: 0px; width: 100%; height: 100%; margin-right: 0px;" oncontextmenu="return false">
+    <form id="frmPortal" runat="server" method="post">
+    <asp:ScriptManager ID="ScriptManager1"  runat="server" EnablePageMethods="True" EnablePartialRendering="true">
+        <Services>
+            <%--<asp:ServiceReference Path="~/webServices/evoltaProcesos.asmx" />--%>
+        </Services>
+        <CompositeScript>
+            <Scripts>
+                <asp:ScriptReference Name="MicrosoftAjax.js" />
+                <asp:ScriptReference Name="MicrosoftAjaxWebForms.js" />
+            </Scripts>
+        </CompositeScript>
+        <Scripts>
+            <asp:ScriptReference Path="~/javascript/FG.js" />
+            <asp:ScriptReference Path="~/javascript/ieupdate.js" />
+            <%--<asp:ScriptReference Path="~/javascript/jquery-1.4.2.min.js" />--%>
+        </Scripts>
+    </asp:ScriptManager>
+    <div>
+        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+                <td>
+                    <input id="hdIdProyecto" type="hidden" runat="server" />
+                    <input id="hdIdEtapa" type="hidden" runat="server" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/imagenes/presentacion/gf.jpg" Height="80px"
+                        Width="80px" />
+                </td>
+            </tr>
+            <tr>
+                <td class="HeaderRowMaster">
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="HeaderCellMasterLeft" style="width: 5%;">
+                                <asp:Label ID="lblFecha" runat="server" Text="Fecha :" CssClass="HeaderLabelMaster"></asp:Label>
+                            </td>
+                            <td class="HeaderCellMasterCenter" style="width: 5%;">
+                                <asp:Label ID="lblFechaValor" runat="server" Text="" CssClass="HeaderLabelMaster"></asp:Label>
+                            </td>
+                            <td class="HeaderCellMasterCenter" style="width: 0.5%; padding-left: 5px; padding-right: 5px;">
+                                <asp:Label ID="Label5" runat="server" Text="|" CssClass="HeaderLabelMaster"></asp:Label>
+                            </td>
+                            <%--<td class="HeaderCellMasterCenter" style="width: 5%;">
+                                <asp:Label ID="Label3" runat="server" Text="País :" CssClass="HeaderLabelMaster"></asp:Label>
+                            </td>
+                            <td class="HeaderCellMasterCenter" style="width: 5%;">
+                                <asp:UpdatePanel ID="UpdatePanel3" runat="server">
+                                    <ContentTemplate>
+                                        <asp:Label ID="lblPais" runat="server" CssClass="HeaderLabelMaster" Text="[pais]"></asp:Label>
+                                    </ContentTemplate>
+                                </asp:UpdatePanel>
+                            </td>--%>
+                            <td class="HeaderCellMasterCenter" style="width: 74%;" align="center">
+                                <table cellpadding="0" cellspacing="0" class="TituloNroDocumento">
+                                    <%--<tr>
+                                        <td align="right">
+                                            <asp:Label ID="Label6" runat="server" Text="Hipodromo : " Font-Bold="True" Font-Names="Verdana"
+                                                Font-Size="Small"></asp:Label>
+                                        </td>
+                                        <td align="left">
+                                            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                                                <ContentTemplate>
+                                                    <asp:Label ID="lblMasterHiprodromo" runat="server" Font-Names="Verdana" Font-Size="Small"></asp:Label>
+                                                </ContentTemplate>
+                                            </asp:UpdatePanel>
+                                        </td>
+                                    </tr>--%>
+                                </table>
+                            </td>
+                            <td class="HeaderCellMasterCenter" style="width: 0.5%; padding-left: 5px; padding-right: 5px;">
+                                <asp:Label ID="Label2" runat="server" Text="|" CssClass="HeaderLabelMaster"></asp:Label>
+                            </td>
+                            <td class="HeaderCellMasterCenter" style="width: 5%;">
+                                <asp:Label ID="Label1" runat="server" Text="Usuario :" CssClass="HeaderLabelMaster"></asp:Label>
+                            </td>
+                            <td class="HeaderCellMasterCenter" style="width: 5%;">
+                                <asp:LinkButton ID="lnkUsuario" runat="server" CssClass="HeaderLinkMaster" Text="[usuario]"></asp:LinkButton>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td bgcolor="#E44146" style="background-color: #397DF3; height: 1px;">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr>
+                                <td valign="top">
+                                    <asp:Panel ID="pnlHeaderMenu" runat="server" CssClass="cpHeader" Height="17px" Width="17px">
+                                        <asp:Image ID="imgMenu" runat="server" ImageUrl="../imagenes/diseño/showMnu.png"
+                                            Height="17px" Width="17px" />
+                                    </asp:Panel>
+                                    <asp:Panel ID="pnlBodyMenu" runat="server" Width="150px">
+                                        <asp:Menu ID="mnuPrincipal" runat="server" BackColor="#397DF3" BorderColor="White"
+                                            Font-Names="Verdana" ForeColor="White" Orientation="Vertical" StaticSubMenuIndent="10px"
+                                            StaticDisplayLevels="2" Width="150px">
+                                            <StaticSelectedStyle BackColor="#0E61EB" ForeColor="White" />
+                                            <StaticMenuItemStyle Font-Size="8pt" HorizontalPadding="5px" VerticalPadding="2px" />
+                                            <DynamicHoverStyle BackColor="#397DF3" ForeColor="White" />
+                                            <DynamicMenuStyle BackColor="#397DF3" BorderColor="#397DF3" BorderStyle="Solid" BorderWidth="2px" />
+                                            <DynamicSelectedStyle BackColor="#397DF3" Width="100%" Height="100%" />
+                                            <DynamicMenuItemStyle Font-Size="8pt" HorizontalPadding="5px" VerticalPadding="2px" />
+                                            <StaticHoverStyle BackColor="#397DF3" ForeColor="White" />
+                                        </asp:Menu>
+                                    </asp:Panel>
+                                </td>
+                                <td valign="top" style="width: 99%;">
+                                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                    </asp:ContentPlaceHolder>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" class="FooterRowMaster" width="100%">
+                    <asp:Label ID="lblCopyRight" runat="server" CssClass="FooterLabelMaster" Text="Copyright 2012"
+                        Width="232px"></asp:Label>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <%--<ajax:CollapsiblePanelExtender ID="cpeMnu" runat="server" TargetControlID="pnlBodyMenu"
+        CollapseControlID="pnlHeaderMenu" ExpandControlID="pnlHeaderMenu" Collapsed="true"
+        ImageControlID="imgMenu" CollapsedSize="0" ExpandedSize="150" ExpandDirection="Horizontal"
+        ExpandedImage="../imagenes/diseño/1287766624_control_left.png" CollapsedImage="../imagenes/diseño/1287766758_control_right.png">
+    </ajax:CollapsiblePanelExtender>--%>
+    </form>
+</body>
+</html>

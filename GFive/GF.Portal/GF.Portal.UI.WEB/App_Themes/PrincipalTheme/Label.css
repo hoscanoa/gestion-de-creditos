@@ -1,0 +1,93 @@
+﻿body {
+}
+.CsslblFormulario
+{
+	vertical-align:middle;
+	text-align:left;
+	color:#FFFFFF;
+	font-family:Verdana;
+	font-size:10;
+    padding-left:5px;
+    cursor:pointer;
+    width:100%;
+}
+.CsslblFormularioOculto
+{
+	font-family: Arial, Swiss, sans-serif; /*font-size: 14px;*/
+	font-size: 11px;
+	font-style: normal;
+	color: #5B8D2C;
+	font-weight: bold;
+	display: none;
+}
+.CsslblFormularioX20
+{
+	font-family: Arial, Swiss, sans-serif; 
+	font-size: 20px;
+	font-style: normal; 
+	color: #5B8D2C; 
+	font-weight: bold 
+}
+.CsslblNormalNegrita
+{
+	font-family: Arial;
+	font-size: 11px;
+	font-weight: bold;
+	color: #000000;
+}
+.CsslblNormalNegritaX12
+{
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+}
+.CsslblNormalNegritaX14
+{
+	font-family: Arial;
+	font-size: 14px;
+	font-weight: bold;
+	color: #000000;
+}
+.CsslblNormalWhiteX14
+{
+	font-family: Arial;
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.CsslblNormal
+{	
+	vertical-align:middle;
+	text-align:left;
+	color:#000000;
+    font-family:Verdana;
+    font-size:11px;
+    padding-left:5px;
+}
+.Csslbl
+{	
+	vertical-align:middle;
+	text-align:left;
+	color:#000000;
+    font-family:Verdana;
+    font-size:12px;
+    font-weight:bold;
+    padding-left:5px;
+}
+.CsslblEncabezado
+{
+	font-family:Verdana;
+	font-size:5;
+	font-weight:bold;
+	color:Black; 
+}
+.CsslblSubTituloTexto
+{   vertical-align:middle;
+	text-align:left;
+	color:#000000;
+    font-family:Geneva, Arial, Helvetica, sans-serif;
+    font-size:12px;
+	font-weight:bold;    
+    padding-left:5px;
+}

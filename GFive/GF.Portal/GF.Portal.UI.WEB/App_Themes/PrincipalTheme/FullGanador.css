@@ -1,0 +1,1221 @@
+﻿/*****************************************************************/
+body {
+}
+/*****************************************************************/
+.AutoCompleteExtender_CompletionList
+{
+	background-color: window;
+	border: 1px solid #FF0000;
+	color: windowtext;
+	padding: 0px;
+	font-size: 10px;
+	background-color: #CCCCCC;
+	font-family: Verdana;
+	text-align: left;
+}
+
+/*AutoComplete flyout */
+.AutoCompleteExtender_CompletionListItem
+{
+	text-align: left;
+	background-color: White;
+	font-size: 10px;
+	font-family: Verdana;
+	text-transform: uppercase;
+}
+
+/* AutoComplete highlighted item */
+.AutoCompleteExtender_HighlightedItem
+{
+	background-color: #99CCFF;
+	color: windowtext;
+	font-weight: bold;
+	font-size: 10px;
+	text-align: left;
+	font-family: Verdana;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+/*****************************************************************/
+._filaEncabezadoPrincipal
+{
+	background-image: url( 'http://localhost/fullganador/imagenes/diseño/px_td.jpg' );
+	width: 100%;
+	background-repeat: repeat;
+}
+._filaEncabezadoTitulo
+{
+	background-image: url(  'http://localhost/evolta/imagenes/submenu3.PNG' );
+	background-repeat: repeat;
+}
+
+._filaEncabezado
+{
+	background-image: url(  'http://localhost/evolta/imagenes/submenu3.PNG' );
+	width: 100%;
+	background-repeat: repeat;
+}
+._colGrilla
+{
+	background-image: url(  'http://localhost/fullganador/imagenes/diseño/submenu2.PNG' );
+	background-repeat: repeat;
+	height: 20px;
+}
+/*****************************************************************/
+.logTextbox
+{
+	border-color:#666666;
+	border-style:none ;
+	border-width:0px;
+	font-family:Verdana;
+	font-size:9px;	
+	width:70px;
+}
+.logMarkaAgua
+{
+	border: 1px solid #000000;
+	font-family: Verdana;
+	font-size: 9px;
+	width: 70px;
+	color: #777777;
+	background-color: #EEEEEE;
+	width: 110px;
+}
+.logMarkaAguaSinBorde
+{
+	border-color:#666666;
+	border-style:none ;
+	border-width:0px;
+	font-family:Verdana;
+	font-size:9px;	
+	width:70px;
+	color: #777777;
+	background-color:#EEEEEE;
+}
+/*****************************************************************/
+.TreeView
+{
+	border-color:#666666;
+	border-style:Solid;
+	border-width:1px;
+	font-family:Verdana;
+	font-size:12px;
+  }
+/*****************************************************************/
+.captionInmueble
+{
+	font-size: x-small; 
+	font-family: Verdana; 
+	font-weight: bold; 
+	color: #FFFFFF; 
+	background-color: #5F9DCA;
+}
+.UnidadesTemporal
+{
+	background-position: #B7B7FF;
+	font-family: Verdana;
+	font-size: 9px;
+	text-align: center;
+	background: #0066CC;
+	width: 50px;
+	height: 55px;
+	cursor: pointer;
+	color: #FFFFFF;
+	list-style-type: square;
+}
+.UnidadesBloqueado
+{
+	background-position: #FF0000;
+	font-family: Verdana;
+	font-size: 9px;
+	text-align: center;
+	background: #E44146;
+	width: 50px;
+	height: 55px;
+	cursor: pointer;
+	color: #FFFFFF;
+}
+.UnidadesDisponibles
+{
+	font-family: Verdana;
+	font-size: 9px;
+	text-align: center;
+	background: #FFFFFF;
+	width: 50px;
+	height: 55px;
+	cursor: pointer;
+}
+.UnidadesNegociado
+{
+	font-family: Verdana;
+	font-size: 9px;
+	text-align: center;
+	background: #7EE07E;
+	width: 50px;
+	height: 55px;
+	cursor: pointer;
+}
+.Separacion
+{
+	background-color: Yellow;
+	font-size:9px;
+	height: 6px;
+	width: 100%;
+}
+.ctaInicial
+{
+	background-color: #3399FF;
+	font-size:9px;
+	height: 6px;
+	width: 100%;
+}
+.financiamiento
+{
+	background-color: #FFCC99;
+	font-size:9px;
+	height: 6px;
+	width: 100%;
+}
+.cancelada
+{
+	background-color: Aqua;
+	font-size:9px;
+	height: 6px;
+	width: 100%;
+}
+.entregado
+{
+	background-color: Green;
+	font-size:9px;
+	height: 6px;
+	width: 100%;
+}
+/*****************************************************************
+* Estilo para Master Page
+*/
+
+.HeaderRowMaster
+{
+	/*border: #5877d1 1px solid;*/
+	border-top:solid 1px #808080;
+	height: 20px;
+}
+.HeaderLogoMaster
+{
+	height: 60;
+}
+.HeaderLinkMaster
+{
+	font-family:Tahoma;
+	font-size:11px;
+	color:#333333;
+	background-color:White;
+	padding:3px;
+}
+.HeaderLinkMaster:Hover
+{
+	font-family:Tahoma;
+	font-size:11px;
+	color:#333333;
+	background-color:#FFCCCC;
+	padding:3px;
+}
+
+.InternetExplorer8
+{
+	border-style:solid;
+	border-color:#790000;
+    border-width:2px;
+    font-size:0.8em;
+	z-index:60;
+}
+
+.HeaderCellMasterCenter
+{
+	text-align:center;
+	vertical-align:middle;
+}
+.HeaderCellMasterLeft
+{
+	text-align:left;
+	vertical-align:middle;
+}
+.HeaderLabelMaster
+{
+	font-family:Tahoma;
+	font-size:11px;
+}
+
+.HeaderLabelMasterTitle
+{
+	font-family:Tahoma;
+	font-size:13px;
+	font-weight:bold;
+}
+
+.FooterRowMaster
+{
+	height: 20px; 
+	/*border-top: #5877d1 1px solid;*/
+	border-top: #999999 1px solid;
+	text-align:right;
+}
+.FooterLabelMaster
+{
+	font-family:Tahoma;
+	font-size:9px;
+}
+
+/***************************************************************
+* Estilo para Celdas de Titulos y Subtitulos
+*/
+.CeldaTituloFondo
+{
+	background-color: #808080 ;
+	background-image: url('http://local/evolta/mantenedores/imagenes/px_td.jpg');
+	height: 30px;
+}
+
+.CeldaTituloTexto
+{   vertical-align:middle;
+	text-align:left;
+	color:#000000;
+    font-family:Verdana;
+    font-size:15px;
+    font-weight:bold;
+    padding-left:5px;
+}
+
+.TituloNroDocumento
+{   vertical-align:middle;
+	text-align:right;
+	color:#000000;
+    font-family:Verdana;
+    font-size:15px;
+    font-weight:bold;
+    padding-left:5px;
+}
+
+.CeldaPanel
+{
+	vertical-align:top;
+	background-color:#F4FAFF; /*#EAF3FD;*/
+	width:100%;
+}
+.CeldaPanelItemSeleccionado
+{
+	vertical-align:top;
+	background-color:#DBE6F2; /*#EAF3FD;*/
+	width:100%;
+}
+
+.CeldaItemSeleccionado
+{   vertical-align:middle;
+	text-align:left;
+	color:#0455B0;
+    font-family:Arial;
+    font-size:18px;
+	font-weight:bold;
+    padding-left:5px;
+}
+.CeldaPanelIzquierdo
+{
+	vertical-align:top;
+	background-color:#DDDDDD; /*#F4FAFF;*/
+	border-right:solid 1px #808080; /* #B6C7D3;*/
+	width:35%;
+}
+
+
+.CeldaPanelIzquierdoEstatico
+{
+	vertical-align:top;
+	background-color:#DDDDDD; /*#F4FAFF;*/
+	border-right:solid 1px #808080; /* #B6C7D3;*/
+	width:300px;
+}
+
+.CeldaPanelDerecho
+{
+	vertical-align:top;
+	background-color:#F4F4F4;
+	width:65%;
+}
+
+.CeldaPanelDerechoEstatico
+{
+	vertical-align:top;
+	background-color:#F4F4F4;
+	width:800px;
+}
+
+/* Alan Azabache */
+.CeldaPanelSuperior
+{
+	vertical-align:top;
+	background-color:White;
+	width:65%;
+}
+
+.CeldaPanelInferior
+{
+	vertical-align:top;
+	background-color:White;
+	width:65%;
+}
+/* Fin */
+
+
+.CeldaToolBar
+{
+	vertical-align:middle;
+	background-color:#666666;
+ 	width:100%;
+ 	background-image: url("../Imagenes/toolbar1.PNG");
+ 	background-color:#cccccc;
+ 	padding: 2px 2px 2px 2px;
+}
+
+.CeldaSubTituloFondoTollbar
+{
+	 background-color:#729DCD;
+	 height:20px;
+	 text-align:center;
+	 padding: 1px 1px 0px 1px 
+}
+
+.CeldaSubTituloFondo
+{
+	 background-color:#CCCCCC;
+	 background-image: url("../Imagenes/submenu3.PNG"); 
+	 height:20px;
+	 border-bottom:solid 1px #999999 ;
+}
+.CeldaSubTituloTexto
+{   vertical-align:middle;
+	text-align:left;
+	color:#000000;
+    font-family:Geneva, Arial, Helvetica, sans-serif;
+    font-size:12px;
+	font-weight:bold;    
+    padding-left:5px;
+}
+.DivPanelEdicion
+{
+	position:static;
+	visibility:visible;
+	width:100%; 
+	background-color:#E6E6E6;
+}
+
+.divProgreso
+{
+	background-color:#FFFF99;
+	border: 1px solid #000000;
+	position: absolute;
+	z-index: 999;
+	left: 10;
+	top: 100%;
+	height: 90px;
+	width: 140px;
+	margin-top: -100px;
+	overflow: auto;
+	padding:1px 1px 1px 1px;
+	visibility:visible;
+	vertical-align:middle;
+	text-align:center;
+	color:Red; 
+}
+
+.DivPanelGrilla
+{
+	border:solid 1px #999999; 
+	margin:1px 1px 1px 1px;
+}
+.CeldaTituloPanelEdicion
+{
+	 background-color:#E44146;
+	 Color:#FFFFFF;
+	 /*background-image: url("../Imagenes/submenu.PNG"); */
+	 height:20px;
+	 /*border-bottom:solid 1px #999999 ;*/
+}
+.CeldaTituloTextPanelEdicion
+{   vertical-align:middle;
+	text-align:left;
+	color:#FFFFFF;
+	 font-family:Verdana;
+	 font-size:10;
+    padding-left:5px;
+    cursor:pointer;
+    width:100%;
+}
+
+.CeldaSubTituloTextoNormal
+{   vertical-align:middle;
+	text-align:left;
+	color:#000000;
+    font-family:Geneva, Arial, Helvetica, sans-serif;
+    font-size:12px;
+	font-weight:normal;    
+    padding-left:5px;
+}
+
+/**************************************************
+* Estilos Popup (Panels Flotantes)
+*/
+.CeldaTituloFondoPopUp
+{
+	 background-color:SteelBlue;
+	 height:20px;
+	 width:100%;
+}
+.CeldaTituloTextoPopUp
+{   vertical-align:middle;
+	text-align:left;
+	color:White;
+    font-family:Arial;
+    font-size:12px;
+    font-style:normal;
+    font-weight:bold;
+    padding-left:5px;
+}
+.PanelPopUpMantenimiento
+{
+	/*background-color:#DBE6F2; */
+	background-color:#F4FAFF; 
+	/*border: 3px solid #006699;*/
+	z-index: 1;
+	overflow: auto;
+	padding:1px 1px 1px 1px;
+	/*display:none;*/
+ }
+ 
+ .PanelPopUpFlotante
+{
+	background-color:#FBFADD;
+	border: 3px solid #006699;
+	z-index: 1;
+	overflow: auto;
+	padding:1px 1px 1px 1px;
+	visibility:hidden;
+ }
+ 
+.PanelPopUpSimple
+{
+	background-color:#FBFADD;
+	border: 3px solid #006699;
+	position: absolute;
+	z-index: 1;
+	left: 50%;
+	top: 50%;
+	visibility: visible;
+	/*float: right;*/
+	height: 106px;
+	width: 300px;
+	margin-top: -53px;
+	margin-left: -150px;
+	overflow: auto;
+	padding:1px 1px 1px 1px;
+	visibility:hidden;
+}
+.PanelDetallePresupuesto
+{
+	visibility:hidden;	
+	height:0px;
+}
+.PanelPopUpCallBack
+{
+	background-color:#FFFF99;
+	border: 1px solid #000000;
+	position: absolute;
+	z-index: 2;
+	left: 100%;
+	top: 122px;
+	visibility: visible;
+	height: 20px;
+	width: 120px;
+	margin-top: -10px;
+	margin-left: -125px;
+	overflow: auto;
+	padding:1px 1px 1px 1px;
+	visibility:hidden;
+}
+.PanelPopUpImportar
+{
+	background-color:#FBFADD;
+	border: 3px solid #006699;
+	position: absolute;
+	z-index: 1;
+	left: 50%;
+	top: 50%;
+	visibility: visible;
+	height: 150px;
+	width: 400px;
+	margin-top: -75px;
+	margin-left: -200px;
+	overflow: auto;
+	padding:1px 1px 1px 1px;
+	visibility:hidden;
+}
+/***
+* Estilo Controles Edicion
+*/
+.EditarTextBox
+{
+	border-color:#666666;
+	border-style:Solid;
+	border-width:1px;
+	font-family:Verdana;
+	font-size:10px;
+	text-transform: uppercase;
+}
+.EditarTextBoxObligatorio
+{
+	border-color:#666666;
+	border-style:Solid;
+	border-width:1px;
+	font-family:Verdana;
+	font-size:10px;
+	text-transform: uppercase;
+	border: 1px solid #CC0000;
+	width: 150px;
+}
+  
+  /*Para caracteres numericos*/
+  .EditarTextBoxNumerico
+{
+	border-color:#666666;
+	border-style:Solid;
+	border-width:1px;
+	font-family:Verdana;
+	font-size:10px;
+	text-align:right;
+  }
+  
+  /*Se transforma todo a mayúsculas*/
+  .EditarTextBoxMayus
+{
+	border-color:#666666;
+	border-style:Solid;
+	border-width:1px;
+	font-family:Verdana;
+	font-size:10px;
+	text-transform:uppercase;
+  }
+  
+  .EditarTextBoxMail
+{
+	border-color:#666666;
+	border-style:Solid;
+	border-width:1px;
+	font-family:Verdana;
+	font-size:10px;
+	text-transform:inherit;
+  }
+  
+.EditarTextBoxError
+{
+	border-color:#666666;
+	border-style:Solid;
+	border-width:1px;
+	font-family:Verdana;
+	font-size:12px;
+	background-color:#FFECEC;
+}
+  
+.EditarTextBoxInvisible
+{
+	background-color:#FBFADD;
+	border-color:#FBFADD;
+	border-style:Solid;
+	border-width:1px;
+	font-family:Verdana;
+	font-size:10px	
+}
+.EditarLabel
+{
+	font-family:Verdana;
+	font-size:11px;
+	color:#000000;
+}
+.EditarLabelTextBox
+{
+	font-family:Verdana;
+	font-size:12px;
+	color:#000000;	
+	font-weight:bold;
+}
+.EditarLabelMonto
+{
+	font-family:Verdana;
+	font-size:12px;
+	color:DarkBlue;
+}
+
+.EditarPanel
+{
+	padding-top:5px;
+	padding-bottom:5px;
+}
+.EditarLink
+{
+	font-family:Verdana;
+	color:#333333;
+	font-size:10px;
+	padding:3px 3px 3px 3px;
+	text-decoration:none;
+	background-image: url("../Imagenes/cerrar.png");
+	background-repeat:no-repeat;
+	background-position:left;
+}
+.EditarLink:Hover
+{
+	font-family:Verdana;
+	color:#000000;
+	font-size:10px;
+	padding:2px 2px 2px 2px;
+	text-decoration:none;
+	border:solid 1px #C15855;
+	background-color:#FFCCCC
+}
+
+.DocumentoLink
+{
+	font-family:Verdana;
+	color:#333333;
+	font-size:10px;
+	padding:3px 3px 3px 3px;
+	text-decoration:none;
+	color:Red;
+	font-weight:bold; 
+	background-image: url("../Imagenes/cerrar.png");
+	background-repeat:no-repeat;
+	background-position:left;
+}
+.DocumentoLink:Hover
+{
+	font-family:Verdana;
+	color:#000000;
+	font-size:10px;
+	padding:2px 2px 2px 2px;
+	text-decoration:none;
+	border:solid 1px #C15855;
+	background-color:#FFCCCC
+}
+
+
+.EditarButton
+{
+	font-family:Verdana;
+	font-size:11px;
+	border: solid 1px #666666;
+	background-image: url("../Imagenes/botonnormal.PNG");
+	color:#333333;
+	height:21px;
+	cursor:pointer;
+}
+.EditarButton:Hover
+{
+	font-family:Verdana;
+	font-size:11px;
+	background-image: url("../Imagenes/botonhot.PNG");
+	height:21px;
+	cursor:pointer;
+}
+
+/******WILLIAMS*****/
+
+.EditarRadioButton
+{
+	font-family:Verdana;
+	font-size:11px;
+	border: solid 1px #666666;
+	background-image: url("../Imagenes/botonhot.PNG");
+	color:#000000;
+	height:21px;
+	cursor:pointer;
+}
+
+/****************/
+
+
+.EditarButtonCerrar
+{
+	font-family:Verdana;
+	font-size:11px;
+	border: solid 1px #666666;
+	background-image: url("../Imagenes/botonnormal.PNG");
+	color:#333333;
+	height:21px;
+	cursor:pointer;
+}
+.EditarButtonCerrar:Hover
+{
+	font-family:Verdana;
+	font-size:11px;
+	background-image: url("../Imagenes/botonhot.PNG");
+	color:#000000;
+	height:21px;
+	cursor:pointer;
+}
+.EditarCeldaButton
+{
+	border:solid 1px White;
+}
+.EditarCeldaTexto
+{
+	text-align: left;
+	vertical-align:middle;
+}
+.EditarCeldaLabel
+{
+	text-align: right ;
+	vertical-align:middle;
+}
+
+/*Williams*/
+.EditarCeldaLinkGridView
+{
+	font-family: Verdana;
+	font-size: 9px;
+	color:#000000;
+	text-decoration: none;
+	width:100%;	
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	height:20px;
+}
+
+/*Williams*/
+.EditarLinkGridView
+{
+	font-family: Verdana;
+	font-size: 9px;
+	color:#000000;
+	text-decoration: none;
+	display:block;
+	padding: 4px 0px 4px 4px;	
+}
+
+/*Williams*/
+.EditarImageButtonGridView
+{
+   cursor:pointer;
+}
+
+/*Williams*/
+.EditarDropDownList
+{
+	border-color:#666666;
+	border-style:Solid;
+	border-width:1px;
+	font-family:Verdana;
+	font-size:10px;
+	width:150px;
+  }
+  
+  .EditarDropDownListObligatorio
+{
+	border-color:Red;
+	border-style:solid;
+	border-width:2px;
+	font-family:Verdana;
+	font-size:10px;
+	width:150px;
+  }
+
+.EditarCalendario
+{
+	cursor:pointer;	
+}
+
+
+/*Correccion calendar extender sobre dropdownlist*/
+.Calendario 
+{
+position: relative;
+left: 0px !important;
+top: 0px !important;
+visibility: visible;
+display: block;
+}
+
+.Calendario iframe
+{
+left: 0px !important;
+top: 0px !important;
+}
+/***************************************************/
+
+.Calendario .ajax__calendar_container
+{
+	border:1px solid #646464;
+	background-color: lemonchiffon;
+	color:Red;
+ }
+ 
+  .Calendario .ajax__calendar_other .ajax__calendar_day,
+  .Calendario .ajax__calendar_other .ajax__calendar_year
+{
+	color:black;
+}
+
+ .Calendario .ajax__calendar_hover .ajax__calendar_day,
+ .Calendario .ajax__calendar_hover .ajax__calendar_month,
+ .Calendario .ajax__calendar_hover .ajax__calendar_year
+{
+	color:black;
+	padding:0px;
+}
+
+.Calendario .ajax__calendar_active .ajax__calendar_day,
+ .Calendario .ajax__calendar_active .ajax__calendar_month,
+ .Calendario .ajax__calendar_active .ajax__calendar_year
+{
+	color:black;
+	font-weight:bold;
+}
+
+/***
+* Estilo para Grillas
+*/
+.EditarMenuGrilla
+{
+    font-style:normal;
+    color:DodgerBlue;
+	font-size:11px;
+	cursor:pointer;
+	border-bottom: solid 1px DodgerBlue;
+  }
+  
+  .EditarBotonMantenimiento
+{
+    cursor:pointer;
+  }
+.EditarGridView
+{
+	width: 100%;
+	vertical-align: top;
+	text-align: left;
+	font-family: Verdana;
+	font-size: 9px;
+	border: solid 1px #FFFFFF;
+}
+.EditarGridViewMantenedor
+{
+	width: 100%;
+	vertical-align: top;
+	text-align: left;
+	font-family: Verdana;
+	font-size: 9px;
+	border: solid 1px #FFFFFF;
+}
+
+.EditarGridViewDetalle
+{
+	width:100%;
+	vertical-align:top;
+	text-align:left;
+    font-family:Verdana;
+    font-size:10px;
+    font-style:normal;
+    border-bottom: none 0px;
+    background-color:#F4FAFF;
+    
+}
+
+.EditarGridViewTitulo
+{
+	width:100%;
+	vertical-align:top;
+	text-align:left;
+    font-family:Verdana;
+    font-size:10px;
+    font-style:normal;
+    border-bottom: none 0px;
+    background-color:#ECF2FF;
+}
+.EditarGridView .GrillaLink
+{
+	width:10%;
+	font-family:Verdana;
+	font-size:10px;
+	color:DarkBlue;
+}
+.RowStyleGridView
+{
+	background-color: #E1F9FF; /* #FFECEC;*/
+	color: #000000;
+	font-family: Tahoma;
+	font-size: 10px;
+}
+
+/*Alan Azabache*/
+.RowStyleGridViewThird
+{
+	background-color:#DDDDDD;/* #FFECEC;*/
+	color:#000000;
+	font-family:Tahoma;
+	font-size: 10px;
+}
+
+.EditarLabelError
+{
+	font-family:Verdana;
+	font-size:11px;
+	font-weight:bold;
+	color:Red;
+}
+/* fin */
+
+.EditRowStyleGridView
+{
+	background-color:#999999;
+}
+
+.SelectedRowStyleGridView
+{
+	background-color:#E2DED6;
+	color:#333333;
+	font-weight:bold;
+}
+
+.PagerStyleGridView
+{
+	background-color:#284775;
+	color:White;
+	text-align:center;
+}
+
+.HeaderStyleGridView
+{
+	background-color:#999999;
+	color:#000000;
+	background-image: url("../Imagenes/submenu4.PNG"); 
+	height:20px;
+	font-family:Verdana;
+}
+
+.AlternatingRowStyleGridView
+{
+	background-color:White;
+	color:#000000;
+	font-family:Tahoma;
+	font-size: 10px;
+}
+
+/*Williams*/
+.EditarTreeView
+{
+	border-color:#666666;
+	border-style:Solid;
+	border-width:1px;
+	font-family:Verdana;
+	font-size:12px;
+  }
+  
+  /*Williams*/
+  .EditarTreeViewSeleccionado
+{
+	border-color:#FFECEC;
+	border-style:Solid;
+	border-width:1px;
+	font-family:Verdana;
+	font-size:12px;
+	background-color:#FFECEC;
+  }
+
+/***************************************************************
+* Estilo para Modal Popup
+*/
+.modalBackground
+{
+	
+	background-color:Gray;
+	filter:alpha(opacity=40);
+	opacity:0.7;
+}
+
+.modalPopup {
+	background-color:#E6E6E6;
+	border-width:3px;
+	border-style:solid;
+	border-color:#790000;
+	padding:3px;
+}
+
+/***************************************************************
+* Estilo visualizacion unidades inmobiliarias
+*/
+
+.Edificio
+{
+	border-color:#5F9DCA;
+	border-bottom-style:solid;
+	border-left-style:solid;
+	border-right-style:solid;
+	border-top-style:solid;
+}
+
+.EdificioTitulo
+{
+	font-family:Verdana;
+	font-size:15px;
+	color:White;
+	background-color:#5F9DCA;
+	text-align:center;
+}
+
+.ModeloTitulo
+{
+	font-family:Verdana;
+	font-size:15px;
+	color:White;
+	background-color:#5F9DCA;
+	text-align:center;
+}
+
+.UnidadesNegociados
+{
+	font-family:Verdana;
+	font-size:11px;
+	color:#000000;
+	background-color:#7EE07E;
+	text-align:center;
+	width:50px;
+	height:55px;
+}
+
+.Estacionamiento
+{
+	background-color:White;
+	width:50px;
+	height:80px;
+}
+
+.PisoVacio
+{
+	font-family:Verdana;
+	font-size:11px;
+	/*color:#000000;
+	background-color:White;*/
+	text-align:center;
+	/*width:300px;*/
+	height:56px;
+	cursor:pointer;
+}
+
+.CeldaPanelDerechoInmuebles
+{
+	vertical-align:top;
+	background-color:#F4F4F4;
+	width:65%;
+	overflow:scroll;
+}
+
+.VentaCancelada
+{
+	background-color:#00FFFF;
+	height:6px;
+}
+
+.VentaInicialPendiente
+{
+	background-color:#99CCFF;
+	height:6px;
+}
+
+.VentaFinanciamientoPendiente
+{
+	background-color:#FFCC99;
+	height:6px;
+}
+
+.Entregado
+{
+	background-color:Green;
+	height:6px;
+	width:100%;
+}
+
+/*** UPDATE PROGRESS ***/
+.updateProgress
+{
+	position: absolute;
+	background-color: #fff;
+	filter: alpha(opacity=70);
+	MozOpacity: 0.7;
+	opacity: 0.7;
+	padding: 0px;
+	margin: 0px;
+}
+.updateProgressdiv
+{
+	background-color: white;
+	padding: 4px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -30px;
+	margin-left: -40px;
+}
+
+/*** COLAPSIBLES ***/
+.collapsedPanel
+{
+    border-color:Silver;
+    background-color:White;
+    overflow:hidden;
+}
+
+/*** Link consulta ***/
+.LinkConsulta
+{
+    background-color:#CCCCCC;
+	background-image: url("../Imagenes/submenu3.PNG");
+	height:100%;
+	width:100%;
+	border-bottom:solid 1px #999999 ;
+	font-family:Tahoma;
+	font-size:11px;
+	padding:3px;
+	color:Black;
+	font-weight:normal;
+}
+.LinkConsulta:Hover
+{
+    background-color:#CCCCCC;
+	background-image: url("../Imagenes/submenu3.PNG"); 
+	height:100%;
+	width:100%;
+	border-bottom:solid 1px #999999 ;
+	font-family:Tahoma;
+	font-size:11px;
+	padding:3px;
+	color:Red;
+    font-weight:bold;
+}
+
+.Panel
+{
+    font-family:Tahoma;
+    font-size:12px;
+    font-weight:bold; 
+}
+
+.CeldaSubPanel
+{
+	 background-color:#E1E1E2;
+	 height:20px;
+	 border-bottom:solid 1px #999999 ;
+}
+
+.HeaderStylePanel
+{
+	background-color:#E1E1E2;
+	color:#000000;
+	height:20px;
+	font-family:Verdana;
+    
+}
