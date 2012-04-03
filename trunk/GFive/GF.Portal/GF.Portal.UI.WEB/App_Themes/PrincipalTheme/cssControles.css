@@ -1,0 +1,905 @@
+﻿body {
+}
+
+/* JAAM */
+/***
+* Estilo para Master Page
+*/
+
+.HeaderRowMaster
+{
+	/*border: #5877d1 1px solid;*/
+	border-top:solid 1px #808080;
+	height: 20px;
+}
+.HeaderLogoMaster
+{
+	/*background-position: right top; 
+	background-image: url("../Imagenes/SplitHorizontal.JPG"); */
+/*	background-position: left top; 
+	background-repeat: no-repeat;
+	background-image: url("../Imagenes/Evolta.PNG"); */
+	height: 60;
+}
+.HeaderLinkMaster
+{
+	font-family:Tahoma;
+	font-size:11px;
+	color:#333333;
+	background-color:White;
+	padding:3px;
+}
+.HeaderLinkMaster:Hover
+{
+	font-family:Tahoma;
+	font-size:11px;
+	color:#333333;
+	background-color:#FFCCCC;
+	padding:3px;
+}
+.NavegaLinkMaster
+{
+	font-family:Verdana;
+	font-size: 0.8em;
+	color:#FFFFFF;
+	background-color:#E44146;
+	padding:3px;
+	text-decoration: none;
+}
+.NavegaLinkMaster:Hover
+{
+	font-family:Verdana;
+	font-size: 0.8em;
+	color:#FFFFFF;
+	background-color:#790000;
+	padding:3px;
+	text-decoration: none;	
+}
+.HeaderCellMasterCenter
+{
+	text-align:center;
+	vertical-align:middle;
+}
+.HeaderCellMasterLeft
+{
+	text-align:left;
+	vertical-align:middle;
+}
+.HeaderLabelMaster
+{
+	font-family:Tahoma;
+	font-size:11px;
+}
+.FooterRowMaster
+{
+	height: 20px; 
+	/*border-top: #5877d1 1px solid;*/
+	border-top: #999999 1px solid;
+	text-align:right;
+}
+.FooterLabelMaster
+{
+	font-family:Tahoma;
+	font-size:9px;
+}
+
+/***************************************************************
+* Estilo para Celdas de Titulos y Subtitulos
+*/
+.CeldaTituloFondo
+{
+	/*background-position: right top; 
+	background-image: url("../Imagenes/Fondos/TituloVista.PNG"); 
+	height:50px;*/ /*background-color: #808080;*/
+	background-image: url('../imagenes/px_td.jpg');
+	height: 30px;
+}
+.CeldaTituloTexto
+{   vertical-align:middle;
+	text-align:left;
+	color:#000000;
+    font-family:Verdana;
+    font-size:15px;
+    font-weight:bold;
+    padding-left:5px;
+}
+.CeldaPanel
+{
+	vertical-align:top;
+	background-color:#F4FAFF; /*#EAF3FD;*/
+	width:100%;
+}
+
+.CeldaPanelItemSeleccionado
+{
+	vertical-align:top;
+	background-color:#DBE6F2; /*#EAF3FD;*/
+	width:100%;
+}
+
+.CeldaItemSeleccionado
+{   vertical-align:middle;
+	text-align:left;
+	color:#0455B0;
+    font-family:Arial;
+    font-size:18px;
+	font-weight:bold;
+    padding-left:5px;
+}
+
+.CeldaPanelIzquierdo
+{
+	vertical-align:top;
+	background-color:#DDDDDD; /*#F4FAFF;*/
+	border-right:solid 1px #808080; /* #B6C7D3;*/
+	width:30%;
+}
+.CeldaPanelDerecho
+{
+	vertical-align:top;
+	background-color:#F4F4F4;
+	/*border-left:solid 1px SteelBlue;*/
+	width:70%;
+}
+
+.CeldaPanelIzquierdoLogin
+{
+	vertical-align:top;
+	background-color:#DDDDDD; /*#F4FAFF;*/
+	border-right:solid 1px #808080; /* #B6C7D3;*/
+	width:20%;
+}
+.CeldaPanelDerechoLogin
+{
+	vertical-align:top;
+	background-color:#F4F4F4;
+	/*border-left:solid 1px SteelBlue;*/
+	width:80%;
+}
+
+.CeldaPanelIzquierdoEXT
+{
+	vertical-align:top;
+	background-color:#DDDDDD; /*#F4FAFF;*/
+	border-right:solid 1px #808080; /* #B6C7D3;*/
+	width:50%;
+}
+.CeldaPanelDerechoEXT
+{
+	vertical-align:top;
+	background-color:#F4F4F4;
+	/*border-left:solid 1px SteelBlue;*/
+	width:50%;
+}
+
+.CeldaToolBar
+{
+	vertical-align:middle;
+	background-color:#666666;
+ 	width:100%;
+ 	background-image: url("../Imagenes/toolbar1.PNG");
+ 	background-color:#cccccc;
+ 	padding: 2px 2px 2px 2px;
+}
+
+.CeldaSubTituloFondoTollbar
+{
+	 background-color:#729DCD;
+	 height:20px;
+	 text-align:center;
+	 padding: 1px 1px 0px 1px 
+}
+
+.CeldaSubTituloFondo
+{
+	 background-color:#CCCCCC;
+	 background-image: url("../Imagenes/submenu3.PNG"); 
+	 height:20px;
+	 border-bottom:solid 1px #999999 ;
+}
+.CeldaSubTituloTexto
+{   vertical-align:middle;
+	text-align:left;
+	color:#000000;
+    font-family:Geneva, Arial, Helvetica, sans-serif;
+    font-size:12px;
+	font-weight:bold;    
+    padding-left:5px;
+}
+.DivPanelEdicion
+{
+	position:static;
+	visibility:visible;
+	width:100%; 
+	background-color:#E6E6E6;
+}
+.DivPanelGrilla
+{
+	border:solid 1px #999999; 
+	margin:1px 1px 1px 1px;
+}
+.CeldaTituloPanelEdicion
+{
+	 background-color:#E44146;
+	 Color:#FFFFFF;
+	 /*background-image: url("../Imagenes/submenu.PNG"); */
+	 height:20px;
+	 /*border-bottom:solid 1px #999999 ;*/
+}
+.CeldaTituloPanelEdicion
+{   vertical-align:middle;
+	text-align:left;
+	color:#FFFFFF;
+	 font-family:Verdana;
+	 font-size:10;
+    padding-left:5px;
+}
+/**************************************************
+* Estilos Popup (Paneles)
+*/
+.CeldaTituloFondoPopUp
+{
+	 background-color:SteelBlue;
+	 height:20px;
+	 width:100%;
+}
+.CeldaTituloTextoPopUp
+{   vertical-align:middle;
+	text-align:left;
+	color:White;
+    font-family:Arial;
+    font-size:12px;
+    font-style:normal;
+    font-weight:bold;
+    padding-left:5px;
+}
+
+.PanelPopUpMantenimiento
+{
+	/*background-color:#DBE6F2; */
+	background-color:#F4FAFF; 
+	/*border: 3px solid #006699;*/
+	z-index: 1;
+	overflow: auto;
+	padding:1px 1px 1px 1px;
+	/*display:none;*/
+ }
+ 
+ .PanelPopUpFlotante
+{
+	background-color:#FBFADD;
+	border: 3px solid #006699;
+	z-index: 1;
+	overflow: auto;
+	padding:1px 1px 1px 1px;
+	visibility:hidden;
+ }
+ 
+ .Calendario .ajax__calendar_container
+{
+	border:1px solid #646464;
+	background-color: lemonchiffon;
+	color:Red;
+	z-index:100;	
+ }
+ 
+  .Calendario .ajax__calendar_other .ajax__calendar_day,
+  .Calendario .ajax__calendar_other .ajax__calendar_year
+{
+	color:black;
+}
+
+ .Calendario .ajax__calendar_hover .ajax__calendar_day,
+ .Calendario .ajax__calendar_hover .ajax__calendar_month,
+ .Calendario .ajax__calendar_hover .ajax__calendar_year
+{
+	color:black;
+}
+
+.Calendario .ajax__calendar_active .ajax__calendar_day,
+ .Calendario .ajax__calendar_active .ajax__calendar_month,
+ .Calendario .ajax__calendar_active .ajax__calendar_year
+{
+	color:black;
+	font-weight:bold;
+}
+  
+ 
+/* Estilo Controles Edicion
+*/
+
+.EditarTextBox
+{
+	border-color:#666666;
+	border-style:Solid;
+	border-width:1px;
+	font-family:Verdana;
+	font-size:12px;
+  }
+.EditarTextBoxError
+{
+	border-color:#666666;
+	border-style:Solid;
+	border-width:1px;
+	font-family:Verdana;
+	font-size:12px;
+	background-color:#FFECEC;
+}
+.EditarTextBoxInvisible
+{
+	background-color:#FBFADD;
+	border-color:#FBFADD;
+	border-style:Solid;
+	border-width:1px;
+	font-family:Verdana;
+	font-size:10px	
+}
+.EditarLabel
+{
+	font-family:Verdana;
+	font-size:11px;
+	color:#000000;
+/*	font-weight:bold;*/
+}
+.EditarLabelTextBox
+{
+	font-family:Verdana;
+	font-size:12px;
+	color:#000000;	
+	font-weight:bold;
+}
+.EditarLabelMonto
+{
+	font-family:Verdana;
+	font-size:12px;
+	color:DarkBlue;
+}
+
+.EditarPanel
+{
+	padding-top:5px;
+	padding-bottom:5px;
+}
+.EditarLink
+{
+	font-family:Verdana;
+	color:#333333;
+	font-size:10px;
+	padding:3px 3px 3px 3px;
+	text-decoration:none;
+	background-image: url("../Imagenes/cerrar.png");
+	background-repeat:no-repeat;
+	background-position:left;
+}
+.EditarLink:Hover
+{
+	font-family:Verdana;
+	color:#000000;
+	font-size:10px;
+	padding:2px 2px 2px 2px;
+	text-decoration:none;
+	border:solid 1px #C15855;
+	background-color:#FFCCCC
+}
+.EditarButtonLogin
+{
+	font-family:Verdana;
+	font-size:11px;
+	border: solid 1px #666666;
+	background-image: url("../Imagenes/botonhot.PNG");
+	color:#333333;
+	height:21px;
+	cursor:pointer;
+}
+.EditarButton
+{
+	font-family:Verdana;
+	font-size:11px;
+	border: solid 1px #666666;
+	background-image: url("../Imagenes/botonnormal.PNG");
+	color:#333333;
+	height:21px;
+	cursor:pointer;
+}
+.EditarButton:Hover
+{
+	font-family:Verdana;
+	font-size:11px;
+	background-image: url("../Imagenes/botonhot.PNG");
+	color:#000000;
+	height:21px;
+	cursor:pointer;
+}
+.EditarButtonCerrar
+{
+	font-family:Verdana;
+	font-size:11px;
+	border: solid 1px #666666;
+	background-image: url("../Imagenes/botonnormal.PNG");
+	color:#333333;
+	height:21px;
+	cursor:pointer;
+}
+.EditarButtonCerrar:Hover
+{
+	font-family:Verdana;
+	font-size:11px;
+	background-image: url("../Imagenes/botonhot.PNG");
+	color:#000000;
+	height:21px;
+	cursor:pointer;
+}
+
+.EditarCeldaButton
+{
+	border:solid 1px White;
+}
+
+.EditarCeldaLabel
+{
+	text-align: right ;
+	vertical-align:middle;
+}
+
+.EditarCalendario
+{
+	cursor:pointer;	
+}
+
+/***
+* Estilo para Grillas
+*/
+
+.EditarMenuGrilla
+{
+    font-style:normal;
+    color:DodgerBlue;
+	font-size:11px;
+	cursor:pointer;
+	border-bottom: solid 1px DodgerBlue;
+  }
+  
+.EditarBotonMantenimiento
+{
+    cursor:pointer;
+  }
+
+.EditarGridView
+{
+	width: 100%;
+	vertical-align: top;
+	text-align: left;
+	font-family: Verdana;
+	font-size: 9px;
+	border: solid 1px #FFFFFF;
+}
+.EditarCeldaLinkGridView
+{
+	font-family: Verdana;
+	font-size: 9px;
+	color:#000000;
+	text-decoration: none;
+	width:100%;	
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	height:20px;
+}
+.EditarLinkGridView
+{
+	font-family: Verdana;
+	font-size: 9px;
+	color:#000000;
+	text-decoration: none;
+	display:block;
+	padding: 4px 0px 4px 4px;	
+}
+.EditarLinkGridView:hover
+{
+	font-family: Verdana;
+	font-size: 9px;
+	font-weight:bold;
+	color:#000000;
+	text-decoration: none;
+	display:block;
+	padding: 4px 0px 4px 4px;	
+}
+.EditarGridViewMantenedor
+{
+	width: 100%;
+	vertical-align: top;
+	text-align: left;
+	font-family: Verdana;
+	font-size: 9px;
+	border: solid 1px #FFFFFF;
+}
+
+.EditarGridViewDetalle
+{
+	width:100%;
+	vertical-align:top;
+	text-align:left;
+    font-family:Verdana;
+    font-size:10px;
+    font-style:normal;
+    border-bottom: none 0px;
+    background-color:#F4FAFF;
+    
+}
+
+.EditarGridViewTitulo
+{
+	width:100%;
+	vertical-align:top;
+	text-align:left;
+    font-family:Verdana;
+    font-size:10px;
+    font-style:normal;
+    border-bottom: none 0px;
+    background-color:#ECF2FF;
+}
+
+.EditarGridView .GrillaLink
+{
+	width:10%;
+	font-family:Verdana;
+	font-size:10px;
+	color:DarkBlue;
+}
+
+.RowStyleGridView
+{
+	background-color:#E1F9FF;/*#FFECEC*/
+	color:#000000;
+	font-family:Tahoma;
+	font-size: 10px;
+}
+
+.EditRowStyleGridView
+{
+	background-color:#999999;
+}
+
+.SelectedRowStyleGridView
+{
+	background-color:#E2DED6;
+	color:#333333;
+	font-weight:bold;
+}
+
+.PagerStyleGridView
+{
+	background-color:#284775;
+	color:White;
+	text-align:center;
+}
+
+.HeaderStyleGridView
+{
+	background-color:#999999;
+	color:#000000;
+	background-image: url("../Imagenes/submenu4.PNG"); 
+	height:20px;
+	font-family:Verdana;
+}
+
+.AlternatingRowStyleGridView
+{
+	background-color:White;
+	color:#000000;
+	font-family:Tahoma;
+	font-size: 10px;
+}
+
+
+/*****
+* Estilo Para Grilla Obras
+*/
+.EditarGridView .PryCodigo
+{
+	width:10%;
+	vertical-align:middle ;
+	text-align:left;
+    font-family:Arial;
+    font-size:10px;
+    font-style:normal;
+}
+
+.EditarGridView .PryNombre
+{
+	width:90%;
+	vertical-align:middle ;
+	text-align:left;
+    font-family:Arial;
+    font-size:10px;
+    font-style:normal;
+}
+.EditarGridView .ObraCodigo
+{
+	width:10%;
+	vertical-align:middle ;
+	text-align:left;
+    font-family:Arial;
+    font-size:10px;
+    font-style:normal;
+}
+.EditarGridView .ObraNombre
+{
+	width:85%;
+	vertical-align:middle ;
+	text-align:left;
+    font-family:Arial;
+    font-size:10px;
+    font-style:normal;
+}
+.EditarGridView .FilaNormalObras
+{
+	background-color:#DBE6F2;
+	color:#333333;
+	text-align:left;
+}
+.EditarGridView .FilaNormalObras:Hover
+{
+	background-color:#99CCFF;
+	color:#333333;
+	text-align:left;
+}
+.EditarGridView .FilaNormalPresupuesto
+{
+	background-color:#F4FAFF;
+	color:#333333;
+	text-align:left;
+}
+.EditarGridView .FilaNormalPresupuesto:Hover
+{
+	background-color:#99CCFF;
+	color:#333333;
+	text-align:left;
+}
+.EditarGridView .FilaSeleccionada
+{
+	background-color:#C1E0FF;
+	font-weight:bold;
+	color:#333366;
+}
+.EditarGridView .FilaSeleccionada:Hover
+{
+	background-color:#99CCFF;
+	font-weight:bold;
+	color:#333366;
+}
+.EditarGridView .FilaNormalGrupo
+{
+	background-color:#F4FAFF;
+	color:#333366;
+	font-weight:bold;
+	text-align:left;
+}
+.EditarGridView .FilaNormalGrupo:Hover
+{
+	background-color:#DBE6F2;
+	color:#333366;
+	font-weight:bold;
+	text-align:left;
+}
+
+
+/***
+* Estilo Pra Grupos, Presupuestos y E/C
+*/
+.EditarGridView .Grupo
+{
+	width:80%;
+	vertical-align:middle ;
+	text-align:left;
+    font-family:Arial;
+    font-size:10px;
+    font-style:normal;
+}
+.EditarGridView .GPresupuesto
+{
+	width:10%;
+	vertical-align:middle ;
+	text-align:center;
+    font-family:Arial;
+    font-size:10px;
+    font-style:normal;
+}
+.EditarGridView .TituloGrupos
+{
+	background-color:#729DCD;
+	height:14px;
+	color:White;
+	text-transform:uppercase;
+	font-family:Verdana;
+	font-size:10px;
+}
+.EditarGridView .PresupuestoNombre
+{
+	width:60%;
+	vertical-align:middle ;
+	text-align:left;
+    font-family:Verdana;
+    font-size:10px;
+    font-style:normal;
+}
+.EditarGridView .ECostoNombre
+{
+	width:72%;
+	vertical-align:middle ;
+	text-align:left;
+    font-family:Verdana;
+    font-size:10px;
+    font-style:normal;
+}
+.EditarGridView .PresupuestoAbrv
+{
+	width:12%;
+	vertical-align:middle ;
+	text-align:center;
+    font-family:Verdana;
+    font-size:10px;
+    font-style:normal;
+}
+.EditarGridView .PresupuestoFecha
+{
+	width:11%;
+	vertical-align:middle ;
+	text-align:center;
+    font-family:Verdana;
+    font-size:10px;
+    font-style:normal;
+}
+.EditarGridView .PresupuestoMonto
+{
+	width:12%;
+	vertical-align:middle ;
+	text-align:right;
+    font-family:Verdana;
+    font-size:10px;
+    font-style:normal;
+}
+
+/***
+* Estilo para Ver presupuestos
+*/
+.EditarGridView .CodigoPartida
+{
+	width:10%;
+	vertical-align:middle ;
+	text-align:left;
+    font-family:Verdana;
+    font-size:10px;
+}
+.EditarGridView .NombrePartida
+{
+	width:40%;
+	vertical-align:middle ;
+	text-align:left;
+    font-family:Verdana;
+    font-size:10px;
+}
+.EditarGridView .MetradoPartida
+{
+	width:25%;
+	vertical-align:middle ;
+	text-align:right;
+    font-family:Verdana;
+    font-size:10px;
+}
+.EditarGridView .MontoPartida
+{
+	width:25%;
+	vertical-align:middle ;
+	text-align:right;
+    font-family:Verdana;
+    font-size:10px;
+}
+
+.EditarGridView .CodigoRecurso
+{
+	width:10%;
+	vertical-align:middle ;
+	text-align:left;
+}
+.EditarGridView .NombreRecurso
+{
+	width:35%;
+	vertical-align:middle ;
+	text-align:left;
+}
+.EditarGridView .TipoRecurso
+{
+	width:10%;
+	vertical-align:middle ;
+	text-align:left;
+}
+.EditarGridView .UnidadRecurso
+{
+	width:5%;
+	vertical-align:middle ;
+	text-align:left;
+}
+.EditarGridView .CuadrillaRecurso
+{
+	width:10;
+	vertical-align:middle ;
+	text-align:right ;
+}
+.EditarGridView .CantidadRecurso
+{
+	width:10%;
+	vertical-align:middle ;
+	text-align:right;
+}
+.EditarGridView .PrecioRecurso
+{
+	width:10%;
+	vertical-align:middle ;
+	text-align:right;
+}
+.EditarGridView .ParcialRecurso
+{
+	width:10%;
+	vertical-align:middle ;
+	text-align:right;
+}
+
+/*************
+Pone el efecto de fondo desabilitado
+***************/
+
+.modalBackground
+{
+ background-color:Gray;
+ filter:alpha(opacity=20);
+ opacity:0.2;
+}
+.modalPopup 
+{
+	background-color:#E6E6E6;
+	border-width:3px;
+	border-style:solid;
+	border-color:#790000;
+	padding:3px;
+}
+
+.PanelLogin
+{
+	background-color:#FFFFFF;
+	border: 3px solid #FFFFFF;
+	position:absolute;
+	z-index: 1;
+	left: 50%;
+	top: 50%;
+	height: 300px;
+	width: 650px;
+	margin-top: -150px;
+	margin-left: -350px;
+	overflow: auto;
+	padding:1px 1px 1px 1px;
+	visibility:visible;
+}
+.divProgreso
+{
+	background-color:#FF0000; /*#FFFF99;*/
+	border: 1px solid #000000;
+	position: absolute;
+	z-index: 999;
+	left: 100%;
+	top: 20px;
+	height: 20px;
+	width: 120px;
+	margin-top: -10px;
+	margin-left: -125px;
+	overflow: auto;
+	padding:1px 1px 1px 1px;
+	visibility:visible;
+	vertical-align:middle;
+	text-align:center;
+}
+.EditarProgreso
+{
+	font-family:Verdana;
+	font-size:11px;
+	color: #FFFFFF; /*#000000;*/
+}

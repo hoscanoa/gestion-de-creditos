@@ -1,0 +1,32 @@
+﻿body {
+}
+.CssddlBloqueado
+{
+	font-family: Verdana;
+	font-size: 9px;
+	border: 1px solid #666666;
+	height: 16px;
+	text-transform: uppercase;
+	background-color: #F5F5F5;
+	font-weight: bold;
+	display: block;
+}
+.CssddlNormalObligatorio
+{
+	font-family: Arial;
+	font-size: 10px;
+	border: 1px solid #CC0000;
+	height: 20px;
+	text-transform: uppercase;
+	/*background-color: #C1D2EE;*/
+	color: #FF0000;
+	width: 153px;
+}
+.CssddlNormal
+{
+	color: #000000;
+	font-family: Arial;
+	font-size: 10px;
+	height: 20px;
+	width: 153px;
+}

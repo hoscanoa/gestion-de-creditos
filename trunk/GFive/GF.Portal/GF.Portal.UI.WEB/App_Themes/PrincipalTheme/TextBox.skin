@@ -1,0 +1,11 @@
+﻿<asp:TextBox runat="server" SkinId="txtBloqueadoSkin" CssClass="CsstxtBloqueado" />
+<asp:TextBox runat="server" SkinId="txtFiltroSkin" CssClass="CsstxtFiltro" />
+<asp:TextBox runat="server" SkinId="txtFiltroObligatorioSkin" CssClass="CsstxtFiltroObligatorio" />
+<asp:TextBox runat="server" SkinId="txtNormalSkinAlingRight" CssClass="CsstxtNormalAlingRight" />
+<asp:TextBox runat="server" SkinId="txtNormalSkinAlingRightBloqueado" CssClass="CsstxtNormalAlingRightBloqueado" />
+<asp:TextBox runat="server" SkinId="txtNormalSkin" CssClass="CsstxtNormal" />
+<asp:TextBox runat="server" SkinId="txtNormalObligatorioSkin" CssClass="CsstxtNormalObligatorio" />
+<asp:TextBox runat="server" SkinId="txtNormalObligatorioSkinAlingRight" CssClass="CsstxtNormalObligatorioAlingRight" />
+<asp:TextBox runat="server" SkinId="txtCampoTextoSkin" CssClass="CsstxtTexto" />
+<asp:TextBox runat="server" SkinId="txtAreaNormalSkin" CssClass="CsstxtAreaNormal" />
+<asp:TextBox runat="server" SkinId="txtAreaBloqueadoSkin" CssClass="CsstxtBloqueadoAreaNormal" />

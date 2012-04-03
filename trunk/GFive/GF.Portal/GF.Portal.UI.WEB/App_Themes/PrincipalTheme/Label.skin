@@ -1,0 +1,11 @@
+﻿<asp:Label runat="server" SkinID="lblFormulario" CssClass="CsslblFormulario" />
+<asp:Label runat="server" SkinID="lblFormularioOculto" CssClass="CsslblFormularioOculto" />
+<asp:Label runat="server" SkinID="lblFormularioX20" CssClass="CsslblFormularioX20" />
+<asp:Label runat="server" SkinID="lblNormalNegrita" CssClass="CsslblNormalNegrita" />
+<asp:Label runat="server" SkinID="lblNormalNegritaX12" CssClass="CsslblNormalNegritaX12" />
+<asp:Label runat="server" SkinID="lblNormalNegritaX14" CssClass="CsslblNormalNegritaX14" />
+<asp:Label runat="server" SkinID="lblNormalWhiteX14" CssClass="CsslblNormalWhiteX14" />
+<asp:Label runat="server" SkinID="lblNormal" CssClass="CsslblNormal" />
+<asp:Label runat="server" SkinID="lblSubTituloTexto" CssClass="CsslblSubTituloTexto" />
+<asp:Label runat="server" SkinID="lbl" CssClass="Csslbl" />
+<asp:Label runat="server" SkinID="lblEncabezado" CssClass="CsslblEncabezado" />

@@ -1,0 +1,2 @@
+﻿<asp:Button runat="server" SkinId="btnNormalSkin" CssClass="CssBtnNormal" />
+<asp:Button runat="server" SkinId="btnNormalSkinX100" CssClass="CssBtnNormalX100" />

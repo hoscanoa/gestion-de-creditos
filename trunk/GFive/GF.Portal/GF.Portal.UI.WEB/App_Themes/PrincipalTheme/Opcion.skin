@@ -1,0 +1,1 @@
+<asp:RadioButton runat="server" SkinId="optNormalSkin" CssClass="CssOptNormal" />

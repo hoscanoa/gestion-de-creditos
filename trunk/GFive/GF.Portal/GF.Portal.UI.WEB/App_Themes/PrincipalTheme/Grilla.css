@@ -1,0 +1,153 @@
+﻿body {
+}
+.CssGvwLista
+{
+	width: 100%;
+	vertical-align: top;
+	text-align: left;
+	font-family: Verdana;
+	font-size: 9px;
+	border: solid 1px #FFFFFF;
+}	
+
+.EditarMenuGrilla
+{
+    font-style:normal;
+    color:DodgerBlue;
+	font-size:11px;
+	cursor:pointer;
+	border-bottom: solid 1px DodgerBlue;
+  }
+  
+  .EditarBotonMantenimiento
+{
+    cursor:pointer;
+  }
+.EditarGridView
+{
+	width: 100%;
+	vertical-align: top;
+	text-align: left;
+	font-family: Verdana;
+	font-size: 9px;
+	border: solid 1px #FFFFFF;
+}
+.EditarGridViewMantenedor
+{
+	width: 100%;
+	vertical-align: top;
+	text-align: left;
+	font-family: Verdana;
+	font-size: 9px;
+	border: solid 1px #FFFFFF;
+}
+
+.EditarGridViewDetalle
+{
+	width:100%;
+	vertical-align:top;
+	text-align:left;
+    font-family:Verdana;
+    font-size:10px;
+    font-style:normal;
+    border-bottom: none 0px;
+    background-color:#F4FAFF;
+    
+}
+
+.EditarGridViewTitulo
+{
+	width:100%;
+	vertical-align:top;
+	text-align:left;
+    font-family:Verdana;
+    font-size:10px;
+    font-style:normal;
+    border-bottom: none 0px;
+    background-color:#ECF2FF;
+}
+.EditarGridView .GrillaLink
+{
+	width:10%;
+	font-family:Verdana;
+	font-size:10px;
+	color:Blue;
+}
+
+
+.EditarLabelError
+{
+	font-family:Verdana;
+	font-size:11px;
+	font-weight:bold;
+	color:Red;
+}
+/* fin */
+
+.EditRowStyleGridView
+{
+	background-color:#999999;
+}
+
+.SelectedRowStyleGridView
+{
+	background-color:#E2DED6;
+	color:#333333;
+	font-weight:bold;
+}
+
+.PagerStyleGridView
+{
+	background-color: #F4F4F4;
+	color: #000000;
+	text-align: center;
+	font-weight: bold;
+	font-family: Verdana;
+	font-size: 9px;
+}
+
+.HeaderStyleGridView
+{
+	background-color:#999999;
+	color:#000000;
+	background-image: url("submenu4.PNG"); 
+	height:20px;
+	font-family:Verdana;
+}
+.RowStyleGridViewThird
+{
+	background-color:#DDDDDD;/* #FFECEC;*/
+	color:#000000;
+	font-family:Tahoma;
+	font-size: 10px;
+}
+
+.AlternatingRowStyleGridView
+{
+	background-color:White;
+	color:#000000;
+	font-family:Tahoma;
+	font-size: 10px;
+}
+
+.MouseSobreFila
+{
+    background-color:Blue;
+    color:Lime;
+    font-family:Tahoma;
+	font-size: 10px;
+}
+.MouseOutFilaImpar
+{
+    background-color:Green;
+    color:Lime;
+    font-family:Tahoma;
+	font-size: 10px;
+}
+ .MouseOutFilaPar
+{
+    background-color:Fuchsia;
+    color:Lime;
+    font-family:Tahoma;
+	font-size: 10px;
+}

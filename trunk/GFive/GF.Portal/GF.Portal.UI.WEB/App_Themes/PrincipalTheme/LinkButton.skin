@@ -1,0 +1,3 @@
+﻿<asp:LinkButton runat="server" SkinID="lnkBtnEncabezado" CssClass="CssLnkBtnEncabezado" />
+<asp:LinkButton runat="server" SkinID="lnkBtnNormalNegritaX12" CssClass="CssLnkBtnNormalNegritaX12" />
+<asp:LinkButton runat="server" SkinID="lnkBtnNormalNegritaX14" CssClass="CssLnkBtnNormalNegritaX14" />

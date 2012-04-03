@@ -1,0 +1,3 @@
+﻿<asp:DropDownList runat="server" SkinId="ddlBloqueadoSkin" CssClass="CssddlBloqueado"/>
+<asp:DropDownList runat="server" SkinId="ddlNormalSkin" CssClass="CssddlNormal" />
+<asp:DropDownList runat="server" SkinId="ddlNormalObligatorioSkin" CssClass="CssddlNormalObligatorio" />

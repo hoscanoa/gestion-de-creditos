@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="GF_Portal_UI_WEB_WSProducto_WSProductoStock" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:1046/WebService/WSProductoStock.asmx</Value>
+    </Setting>
+    <Setting Name="GF_Portal_UI_WEB_WSCliente_WSClienteObtener" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:1046/WebService/WSClienteObtener.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

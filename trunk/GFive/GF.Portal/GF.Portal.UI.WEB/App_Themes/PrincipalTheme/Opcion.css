@@ -1,0 +1,17 @@
+﻿.CssOptNormal
+{
+	font-family: Verdana;
+	font-size: 9px;
+	height: 12px;
+	text-transform: uppercase;
+	color: #000000;
+	width: 150px;
+}
+.CssOptArena
+{
+	background-color:Maroon;
+}
+.CssOptCesped
+{
+	background-color:Green;
+}
