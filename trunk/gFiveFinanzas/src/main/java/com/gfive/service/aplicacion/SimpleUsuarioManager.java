@@ -2,11 +2,13 @@ package com.gfive.service.aplicacion;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import com.gfive.dao.UsuarioDao;
 import com.gfive.domain.Usuario;
 
 @Component
+@Service("usuarioManager")
 public class SimpleUsuarioManager implements UsuarioManager {
 	
 	@Autowired

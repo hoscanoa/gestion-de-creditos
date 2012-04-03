@@ -22,6 +22,8 @@ public interface PedidoDao {
 	
 	public void eliminarPedido(Pedido pedido);
 	
+	public void eliminarPedido(int idPedido);
+	
 	public List<Pedido> getPedidosPendientesPorCliente(String cli_ruc);
 
 }

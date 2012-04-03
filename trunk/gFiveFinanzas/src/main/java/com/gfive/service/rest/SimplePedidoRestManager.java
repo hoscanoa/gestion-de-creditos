@@ -11,7 +11,9 @@ import com.gfive.dao.PedidoDao;
 import com.gfive.domain.Pedido;
 import com.gfive.domain.rest.PedidoList;
 import com.gfive.domain.rest.PedidoRest;
+import com.gfive.service.aplicacion.PedidoManager;
 import com.gfive.service.aplicacion.SimpleClienteManager;
+import com.gfive.service.aplicacion.SimplePedidoManager;
 
 @Component
 @Service("pedidoRestManager")
@@ -19,6 +21,9 @@ public class SimplePedidoRestManager implements PedidoRestManager {
 	
 	@Autowired
 	private SimpleClienteManager clienteManager;
+	
+	@Autowired
+	private SimplePedidoManager pedidoManager;
 	
 	@Autowired
 	private PedidoDao pedidoDao;
@@ -33,6 +38,7 @@ public class SimplePedidoRestManager implements PedidoRestManager {
 			PedidoRest pr = new PedidoRest();
 			pr.setIdPedido(pedido.getIdPedido());
 			pr.setCli_ruc(pedido.getCli_ruc());
+			pr.setCli_razonSocial(clienteManager.getCliente(pedido.getCli_ruc()).getCli_razonSocial());
 			pr.setMontoTotal(pedido.getMontoTotal());
 			pr.setSituacion(pedido.getSituacion());
 			prl.add(pr);
@@ -46,6 +52,7 @@ public class SimplePedidoRestManager implements PedidoRestManager {
 		PedidoRest pr = new PedidoRest();
 		pr.setIdPedido(pedido.getIdPedido());
 		pr.setCli_ruc(pedido.getCli_ruc());
+		pr.setCli_razonSocial(clienteManager.getCliente(pedido.getCli_ruc()).getCli_razonSocial());
 		pr.setMontoTotal(pedido.getMontoTotal());
 		pr.setSituacion(pedido.getSituacion());
 		return pr;
@@ -103,8 +110,8 @@ public class SimplePedidoRestManager implements PedidoRestManager {
 			p.setSituacion(pedidoRest.getSituacion());
 			p.setEstado("1");
 			pedidoDao.grabarPedido(p);
-			if(!clienteManager.agregarCliente(p.getCli_ruc(), "default", 0)){
-				clienteManager.actualizarSaldoCredito(p);
+			if(!clienteManager.agregarCliente(p.getCli_ruc(), pedidoRest.getCli_razonSocial(), 0)){				
+				pedidoManager.aprobarPedido(p);
 			}
 		} else {
 			System.out.println("pedido "+pedidoRest.getIdPedido()+ " ya existe");

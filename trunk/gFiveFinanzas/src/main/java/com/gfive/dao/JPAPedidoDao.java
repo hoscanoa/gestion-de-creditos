@@ -88,6 +88,13 @@ public class JPAPedidoDao implements PedidoDao {
 				.createQuery("DELETE FROM Pedido p WHERE p.idPedido = ?");
 		query.setParameter(1, pedido.getIdPedido()).executeUpdate();
 	}
+	
+	@Transactional(readOnly = false)
+	public void eliminarPedido(int idPedido) {
+		Query query = em
+				.createQuery("DELETE FROM Pedido p WHERE p.idPedido = ?");
+		query.setParameter(1, idPedido).executeUpdate();
+	}
 
 	@SuppressWarnings("unchecked")
 	@Transactional(readOnly = true)
