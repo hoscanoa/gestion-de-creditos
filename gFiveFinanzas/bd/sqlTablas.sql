@@ -66,9 +66,4 @@ CREATE TABLE [dbo].[Pedido](
 GO
 SET ANSI_PADDING OFF
 GO
-/****** Object:  ForeignKey [FK_pedido_cliruc]    Script Date: 03/26/2012 12:32:18 ******/
-ALTER TABLE [dbo].[Pedido]  WITH CHECK ADD  CONSTRAINT [FK_pedido_cliruc] FOREIGN KEY([cli_ruc])
-REFERENCES [dbo].[Cliente] ([cli_ruc])
-GO
-ALTER TABLE [dbo].[Pedido] CHECK CONSTRAINT [FK_pedido_cliruc]
-GO
+

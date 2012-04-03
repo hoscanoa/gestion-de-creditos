@@ -25,10 +25,13 @@ public class JPAClienteDao implements ClienteDao {
 	}
 
 	@Transactional(readOnly = true)
-	public Cliente getCliente(String ruc) throws Exception {
+	public Cliente getCliente(String ruc){
 		Query query = em
 				.createQuery("select c from Cliente c where c.cli_ruc = ? order by c.cli_ruc");
 		query.setParameter(1, ruc);
+		if(query.getResultList().size() != 1){
+			return null;
+		}
 		Cliente cliente = (Cliente) query.getSingleResult();
 		return cliente;
 	}
@@ -54,6 +57,13 @@ public class JPAClienteDao implements ClienteDao {
 		Query query = em
 				.createQuery("DELETE FROM Cliente c WHERE c.cli_ruc = ?");
 		query.setParameter(1, cliente.getCli_ruc()).executeUpdate();
+	}
+	
+	@Transactional(readOnly = false)
+	public void eliminarCliente(String cli_ruc) {
+		Query query = em
+				.createQuery("DELETE FROM Cliente c WHERE c.cli_ruc = ?");
+		query.setParameter(1, cli_ruc).executeUpdate();
 	}
 
 	@SuppressWarnings("unchecked")

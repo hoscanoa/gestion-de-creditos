@@ -12,6 +12,14 @@ public class PedidoRest implements Serializable{
 	private int idPedido;
 	private String situacion;
 	private String cli_ruc;
+	private String cli_razonSocial;
+	
+	public String getCli_razonSocial() {
+		return cli_razonSocial;
+	}
+	public void setCli_razonSocial(String cli_razonSocial) {
+		this.cli_razonSocial = cli_razonSocial;
+	}
 	private float montoTotal;
 	
 	public int getIdPedido() {
