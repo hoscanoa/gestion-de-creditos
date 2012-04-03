@@ -154,7 +154,7 @@
         Dim cliente As String = String.Empty
 
         Using cn As New SqlConnection(cadena)
-            Using cmd As New SqlCommand("usp_cliente_obtener", cn)
+            Using cmd As New SqlCommand("usp_cliente_get", cn)
                 cmd.CommandType = CommandType.StoredProcedure
                 cmd.Parameters.Add("@cli_ruc", SqlDbType.VarChar, 55).Value = idCliente
                 Try
