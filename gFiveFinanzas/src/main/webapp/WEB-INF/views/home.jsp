@@ -63,7 +63,7 @@ ul li a{
 </head>
 <body>
 <div class="container">
-	<div class="imagen"><img src="C:\FranzW\GFive-28-03-2012\gestion-de-creditos\gFiveFinanzas\imagen\telecentro.gif" alt="Ad-1"/>
+	<div class="imagen"><img src="\image\telecentro.gif" alt="Ad-1"/>
 	</div>
 	<div class="bienvenido">
 	<h1>Bienvenido</h1>
