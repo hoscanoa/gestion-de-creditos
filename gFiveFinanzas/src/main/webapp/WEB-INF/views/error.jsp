@@ -7,8 +7,8 @@
 </head>
 <body>
 	
-	Al parecer el servidor ha encontrado un error o su sesión ha caducado. <br>
-	Intente <a href="gfive/portada.htm">volver a la página principal.
+	<h3>Al parecer el servidor ha encontrado un error o su sesión ha caducado. <br>
+	Intente <a href="gfive/portada.htm">volver a la página principal.</a></h3>
 	
 
 </body>
