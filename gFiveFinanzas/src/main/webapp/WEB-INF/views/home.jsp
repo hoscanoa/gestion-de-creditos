@@ -63,7 +63,7 @@ ul li a{
 </head>
 <body>
 <div class="container">
-	<div class="imagen"><img src="/gFiveFinanzas/src/main/webapp/WEB-INF/image/telecentro.gif" alt="Ad-1"/>
+	<div class="imagen"><img src="C:\Users\Warlux\Documents\workspace-sts-2.9.0.RELEASE\gFiveFinanzas\src\main\webapp\WEB-INF\images\telecentro.gif" alt="Ad-1"/>
 	</div>
 	<div class="bienvenido">
 	<h1>Bienvenido</h1>

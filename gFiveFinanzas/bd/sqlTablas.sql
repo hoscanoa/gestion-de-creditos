@@ -67,3 +67,32 @@ GO
 SET ANSI_PADDING OFF
 GO
 
+/****** Object:  Table [dbo].[Asiento]    Script Date: 04/06/2012 17:18:34 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[Asiento](
+	[numAsiento] [int] IDENTITY(1,1) NOT NULL,
+	[descripcion] [varchar](50) NULL,
+	[referencia] [varchar](250) NULL,
+	[montoCargo] [numeric](15, 2) NOT NULL,
+	[montoAbono] [numeric](15, 2) NOT NULL,
+	[cuentaCargo] [varchar](250) NULL,
+	[cuentaAbono] [varchar](250) NULL,
+	[fechaCreacion] [datetime] NULL,
+ CONSTRAINT [PK_Asiento] PRIMARY KEY CLUSTERED 
+(
+	[numAsiento] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
