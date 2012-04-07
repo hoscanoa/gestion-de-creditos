@@ -9,9 +9,6 @@ import org.apache.commons.logging.LogFactory;
 
 import com.gfive.domain.Asiento;
 
-/**
- * A simple logger for reward confirmations.
- */
 public class ConfirmacionAsientoLogger {
 
 	private static final Log logger = LogFactory.getLog(ConfirmacionAsientoLogger.class);
