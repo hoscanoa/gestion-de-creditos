@@ -1,5 +1,6 @@
 package com.gfive.service.aplicacion;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,8 @@ import org.springframework.stereotype.Service;
 
 import com.gfive.dao.PedidoDao;
 import com.gfive.domain.Pedido;
+import com.gfive.jms.PedidoBatchProcessor;
+import com.gfive.service.jms.PedidoJmsManager;
 
 @Component
 @Service("pedidoManager")
@@ -18,6 +21,9 @@ public class SimplePedidoManager implements PedidoManager {
 	
 	@Autowired
 	private ClienteManager clienteManager;
+	
+	@Autowired
+	private PedidoBatchProcessor pedidoBatchProcessor;
 
 	public void setPedidoDao(PedidoDao pedidoDao) {
 		this.pedidoDao = pedidoDao;
@@ -62,6 +68,7 @@ public class SimplePedidoManager implements PedidoManager {
 			clienteManager.actualizarSaldoCredito(pedido);
 			pedido.setSituacion("aprobado");
 			pedidoDao.actualizarPedido(pedido);
+			pedidoBatchProcessor.processSingle(pedido);
 			return true;
 		} else{
 			return false;
