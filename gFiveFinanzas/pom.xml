@@ -182,6 +182,12 @@
 			<version>${org.springframework.version}</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.webflow</groupId>
+			<artifactId>spring-js-resources</artifactId>
+			<version>2.3.0.RELEASE</version>
+		</dependency>
+
 	</dependencies>
 	<build>
 		<plugins>
@@ -210,6 +216,6 @@
 		<finalName>gFiveFinanzas</finalName>
 	</build>
 	<properties>
-		<org.springframework.version>3.0.2.RELEASE</org.springframework.version>
+		<org.springframework.version>3.0.4.RELEASE</org.springframework.version>
 	</properties>
 </project>
