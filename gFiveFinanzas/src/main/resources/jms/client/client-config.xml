@@ -17,7 +17,7 @@
 	<bean id="confirmationLogger" class="com.gfive.jms.ConfirmacionAsientoLogger" />
 
 	<jms:listener-container>
-		<jms:listener ref="confirmationLogger" method="log" destination="com.gfive.confirmation"/>
+		<jms:listener ref="confirmationLogger" method="log" destination="com.gfive.queue.confirmation"/>
 	</jms:listener-container>
 
 </beans>
