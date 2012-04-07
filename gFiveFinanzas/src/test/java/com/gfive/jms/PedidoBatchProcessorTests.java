@@ -70,6 +70,14 @@ public class PedidoBatchProcessorTests extends AbstractTransactionalJUnit4Spring
 		waitForBatch(batch.size(), 1000);
 		assertEquals(batch.size(), confirmationLogger.getConfirmations().size());
 	}
+	
+	@Test
+	public void testSingle() throws Exception {
+
+		pedidoBatchProcessor.processSingle(testPedido);
+		waitForBatch(1, 1000);
+		assertEquals(1, confirmationLogger.getConfirmations().size());
+	}
 
 	private void waitForBatch(int batchSize, int timeout) throws InterruptedException {
 		int sleepTime = 100;

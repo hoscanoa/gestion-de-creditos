@@ -10,6 +10,7 @@ import com.gfive.domain.Pedido;
 /**
  * A batch processor that sends dining event notifications via JMS.
  */
+
 public class JmsPedidoBatchProcessor implements PedidoBatchProcessor {
 
 	private JmsTemplate jmsTemplate;
@@ -22,5 +23,10 @@ public class JmsPedidoBatchProcessor implements PedidoBatchProcessor {
 		for(Pedido pedido: batch){
 			jmsTemplate.convertAndSend(pedido);
 		}
+	}
+	
+	public void processSingle(Pedido pedido) {		
+			jmsTemplate.convertAndSend(pedido);
+		
 	}
 }
