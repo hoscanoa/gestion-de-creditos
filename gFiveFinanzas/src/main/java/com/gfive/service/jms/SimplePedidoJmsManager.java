@@ -23,14 +23,13 @@ public class SimplePedidoJmsManager implements PedidoJmsManager {
 	private AsientoDao asientoDao;
 
 	@Transactional
-	public Asiento asientoPara(Pedido pedido) {
-		//TODO 1: Verificar con grupo lógica de asiento contable	
+	public Asiento asientoPara(Pedido pedido) {	
 		Asiento asiento = new Asiento();
-		asiento.setCuentaAbono("cuenta de telecentro");
-		asiento.setCuentaCargo("cuenta de " + pedido.getCli_ruc());
+		asiento.setCuentaAbono("70.01.01.cajaBancosSoles");
+		asiento.setCuentaCargo("12.01.01.clientes");
 		asiento.setDescripcion("asiento generado automáticamente por GFiveFinanzas");
 		asiento.setFechaCreacion(new Date());
-		asiento.setMontoAbono(0);
+		asiento.setMontoAbono(pedido.getMontoTotal());
 		asiento.setMontoCargo(pedido.getMontoTotal());
 		asiento.setReferencia(String.valueOf(pedido.getIdPedido()));		
 		return asientoDao.generarAsiento(asiento);
