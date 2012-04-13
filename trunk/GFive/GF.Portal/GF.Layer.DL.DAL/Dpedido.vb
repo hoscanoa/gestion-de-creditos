@@ -6,7 +6,7 @@
         Dim retorno As Int32 = 0
         Dim filas As Int32 = 0
 
-
+        'Cadena de conexion
         Using cn As New SqlConnection(cadena)
             Using cmd As New SqlCommand("usp_pedidoEncabezado_add", cn)
                 cmd.CommandType = CommandType.StoredProcedure

@@ -17,6 +17,8 @@ Public Class Dmodulo
                         If dr.HasRows Then
                             modulos = New List(Of Emodulos)
                             Dim modulo As Emodulos = Nothing
+
+                            'Lectura de...
                             Do While dr.Read
                                 modulo = New Emodulos( _
                                     dr.GetInt32(dr.GetOrdinal("idModulo")), _

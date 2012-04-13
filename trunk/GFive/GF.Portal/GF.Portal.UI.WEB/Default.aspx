@@ -16,9 +16,9 @@
             </tr>
             <tr>
                 <td colspan="3" class="HeaderRowMaster">
-                    <table width="100%" cellpadding="0" cellspacing="0">
+                    <table width="100%" cellpadding="0" cellspacing="0" >
                         <tr>
-                            <td class="HeaderCellMasterLeft" style="width: 5%; padding-left: 4px;">
+                            <td class="HeaderCellMasterLeft" style="width: 5%; padding-left: 4px;" >
                                 <asp:Label ID="lblFecha" runat="server" Text="Fecha :" CssClass="HeaderLabelMaster"
                                     Font-Names="Tahoma" Font-Size="Small"></asp:Label>
                             </td>
@@ -88,8 +88,8 @@
                                                 Font-Names="Tahoma" Font-Size="Medium" ForeColor="Black"></asp:Label>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td style="text-align: left;" width="40%">
+                                    <tr >
+                                        <td style="text-align: left;" width="39%" >
                                             <asp:Label ID="lblUsername" runat="server" Text="Usuario" CssClass="EditarLabel"
                                                 Font-Names="Tahoma" Font-Size="Small"></asp:Label>
                                         </td>
@@ -99,7 +99,7 @@
                                             <asp:UpdatePanel ID="UpdatePanel2" runat="server">
                                                 <ContentTemplate>
                                                     <asp:TextBox ID="txtUsuario" runat="server" CssClass="EditarTextBox" MaxLength="12"
-                                                        AutoCompleteType="Disabled" EnableViewState="False"></asp:TextBox>
+                                                        AutoCompleteType="Disabled" EnableViewState="False" ></asp:TextBox>
                                                     <ajax:TextBoxWatermarkExtender ID="tweUsuario" runat="server" TargetControlID="txtUsuario"
                                                         WatermarkCssClass="logMarkaAgua" WatermarkText="Usuario">
                                                     </ajax:TextBoxWatermarkExtender>
