@@ -4,6 +4,7 @@
         Dim resultado() As Integer
 
         Dim options As New TransactionOptions
+        '
         options.IsolationLevel = Transactions.IsolationLevel.ReadCommitted
         options.Timeout = New TimeSpan(0, 2, 0)
 
@@ -23,6 +24,7 @@
         Dim resultado() As Integer
 
         Dim options As New TransactionOptions
+        '
         options.IsolationLevel = Transactions.IsolationLevel.ReadCommitted
         options.Timeout = New TimeSpan(0, 2, 0)
 
