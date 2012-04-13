@@ -421,6 +421,24 @@ Partial Public Class pedido
     Protected WithEvents btnGrabar As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
+    '''btnListar control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnListar As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''btnEnviar control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnEnviar As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
     '''UpdateProgress1 control.
     '''</summary>
     '''<remarks>

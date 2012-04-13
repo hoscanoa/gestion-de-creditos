@@ -275,6 +275,12 @@
                                 <asp:Button ID="btnGrabar" runat="server" OnClientClick="return validar();" 
                                  SkinID="btnNormalSkin" Text="Grabar" Width="100px" />
                              </td>
+                             <td>
+                                 <asp:Button ID="btnListar" runat="server" Text="Lista" SkinID="btnNormalSkin"/>
+                             </td>
+                             <td>
+                                 <asp:Button ID="btnEnviar" runat="server" Text="Enviando Lista" SkinID="btnNormalSkin"/>
+                             </td>
                     </tr>
                   </table>
                 </td> 

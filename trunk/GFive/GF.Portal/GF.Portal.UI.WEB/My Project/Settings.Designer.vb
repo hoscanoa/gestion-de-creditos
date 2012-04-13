@@ -73,6 +73,16 @@ Namespace My
                 Return CType(Me("GF_Portal_UI_WEB_WSCliente_WSClienteObtener"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.WebServiceUrl),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://localhost:1046/WebService/WSPedidoObtener.asmx")>  _
+        Public ReadOnly Property GF_Portal_UI_WEB_WSPedido_WSPedidoObtener() As String
+            Get
+                Return CType(Me("GF_Portal_UI_WEB_WSPedido_WSPedidoObtener"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 
