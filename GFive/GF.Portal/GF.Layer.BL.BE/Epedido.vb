@@ -4,6 +4,7 @@ Public Class Epedido
 #Region "           Atributos                       "
     Private _ped_id As String
     Private _ped_cli_ruc As String
+    Private _ped_razonSocial As String
     Private _ped_fecha As String
     Private _ped_total As Integer
     Private _ped_pro_id As String
@@ -32,6 +33,14 @@ Public Class Epedido
         End Get
         Set(ByVal value As String)
             _ped_cli_ruc = value
+        End Set
+    End Property
+    Public Property ped_razonSocial() As String
+        Get
+            Return _ped_razonSocial
+        End Get
+        Set(ByVal value As String)
+            _ped_razonSocial = value
         End Set
     End Property
     Public Property ped_fecha() As String
@@ -127,6 +136,13 @@ Public Class Epedido
 #Region "           Contructores                    "
     Public Sub New()
 
+    End Sub
+
+    Public Sub New(ByVal ped_id As String, ByVal ped_Cli_ruc As String, ByVal ped_razonSocial As String, ByVal situacion As String)
+        Me.ped_id = ped_id
+        Me.ped_cli_ruc = ped_Cli_ruc
+        Me.ped_razonSocial = ped_razonSocial
+        Me.situacion = situacion
     End Sub
     'Public Sub New(ByVal cli_ruc As String, ByVal cli_razonSocial As String)
     '    Me.cli_ruc = cli_ruc
