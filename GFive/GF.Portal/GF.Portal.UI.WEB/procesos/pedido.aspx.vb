@@ -2,6 +2,7 @@
 Imports GF.Layer.BL.BE
 Imports GF.Portal.UI.WEB.WSProducto
 Imports GF.Portal.UI.WEB.WSCliente
+Imports RESTServices
 
 Partial Public Class pedido
     Inherits System.Web.UI.Page
@@ -174,5 +175,14 @@ Partial Public Class pedido
         gvwLista.DataSource = Nothing
         gvwLista.DataBind()
         Session("Modo") = 0
+    End Sub
+
+    Private Sub btnListar_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnListar.Click
+        Response.Redirect("~/procesos/ListaPedido.aspx")
+    End Sub
+
+    Private Sub btnEnviar_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnEnviar.Click
+        Dim objEnviar As New RESTServices.Pedido
+        objEnviar.EnviarPedidos()
     End Sub
 End Class

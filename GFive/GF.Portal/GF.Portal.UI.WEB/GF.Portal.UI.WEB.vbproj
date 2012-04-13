@@ -144,6 +144,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="procesos\ListaPedido.aspx.designer.vb">
+      <DependentUpon>ListaPedido.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="procesos\ListaPedido.aspx.vb">
+      <DependentUpon>ListaPedido.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="procesos\pedido.aspx.designer.vb">
       <DependentUpon>pedido.aspx</DependentUpon>
     </Compile>
@@ -184,6 +191,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <Compile Include="Web References\WSPedido\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
     <Compile Include="Web References\WSProducto\Reference.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -191,6 +203,10 @@
     </Compile>
     <Compile Include="WebService\WSClienteObtener.asmx.vb">
       <DependentUpon>WSClienteObtener.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebService\WSPedidoObtener.asmx.vb">
+      <DependentUpon>WSPedidoObtener.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="WebService\WSProductoStock.asmx.vb">
@@ -239,6 +255,7 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+    <Content Include="procesos\ListaPedido.aspx" />
     <Content Include="procesos\pedido.aspx" />
     <Content Include="seguridad\bienvenida.aspx" />
     <Content Include="seguridad\login.aspx" />
@@ -249,6 +266,14 @@
       <LastGenOutput>Reference.vb</LastGenOutput>
     </None>
     <None Include="Web References\WSCliente\WSClienteObtener.wsdl" />
+    <None Include="Web References\WSPedido\Epedido.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSPedido\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\WSPedido\WSPedidoObtener.wsdl" />
     <None Include="Web References\WSProducto\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.vb</LastGenOutput>
@@ -256,8 +281,10 @@
     <None Include="Web References\WSProducto\WSProductoStock.disco" />
     <None Include="Web References\WSProducto\WSProductoStock.wsdl" />
     <None Include="Web References\WSCliente\WSClienteObtener.disco" />
+    <None Include="Web References\WSPedido\WSPedidoObtener.disco" />
     <Content Include="Web.config" />
     <Content Include="WebService\WSClienteObtener.asmx" />
+    <Content Include="WebService\WSPedidoObtener.asmx" />
     <Content Include="WebService\WSProductoStock.asmx" />
   </ItemGroup>
   <ItemGroup>
@@ -272,6 +299,14 @@
     <ProjectReference Include="..\GF.Layer.DL.DAL\GF.Layer.DL.DAL.vbproj">
       <Project>{42460BD1-69BF-46DE-A21B-470135493FC4}</Project>
       <Name>GF.Layer.DL.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RESTServices\RESTServices.vbproj">
+      <Project>{8AED3DBF-BB4C-4C07-AFBA-DE83362A4DC9}</Project>
+      <Name>RESTServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TESTServices\TESTServices.vbproj">
+      <Project>{333A77D5-139B-4DF5-8DD5-BBCD7D153254}</Project>
+      <Name>TESTServices</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -291,6 +326,17 @@
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>GF_Portal_UI_WEB_WSCliente_WSClienteObtener</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:1046/WebService/WSPedidoObtener.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WSPedido\</RelPath>
+      <UpdateFromURL>http://localhost:1046/WebService/WSPedidoObtener.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>GF_Portal_UI_WEB_WSPedido_WSPedidoObtener</CachedSettingsPropName>
     </WebReferenceUrl>
     <WebReferenceUrl Include="http://localhost:1046/WebService/WSProductoStock.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>

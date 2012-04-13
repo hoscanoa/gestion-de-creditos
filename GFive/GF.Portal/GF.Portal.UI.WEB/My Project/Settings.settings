@@ -8,5 +8,8 @@
     <Setting Name="GF_Portal_UI_WEB_WSCliente_WSClienteObtener" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">http://localhost:1046/WebService/WSClienteObtener.asmx</Value>
     </Setting>
+    <Setting Name="GF_Portal_UI_WEB_WSPedido_WSPedidoObtener" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:1046/WebService/WSPedidoObtener.asmx</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
