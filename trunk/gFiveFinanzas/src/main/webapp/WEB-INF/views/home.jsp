@@ -63,7 +63,7 @@ ul li a{
 </head>
 <body>
 <div class="container">
-	<div class="imagen"><img src="<c:url value="/resources/images/telecentro.gif"/>" alt="Ad-1"/>
+	<div class="imagen"><img src="<c:url value="webapp/resources/images/telecentro.gif"/>" alt="Ad-1"/>
 	</div>
 	<div class="bienvenido">
 	<h1>Bienvenido</h1>
